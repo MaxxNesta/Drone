@@ -32,9 +32,9 @@ The supplied defaults select the virtual nodes in Python, while Unity buttons st
 
 Python's 640×480 frame uses x right, y down. Kalman velocities use pixels/second. Unity maps east to +X, north to +Z, up to +Y; GPS conversion currently forces up to zero. A positive Unity Euler X rotates forward down, hence default pitch inversion. Firmware logical sensor axes are forward/right/down, with fixed calibration and a 180° heading correction; true-north alignment is unspecified.
 
-## Separate Python simulator: Stage 1 implemented
+## Separate Python simulator: Stages 1 and 2
 
-The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Tracking, localization, legacy integration and control below remain future design.
+The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Stage 2 adds `drone_sim/tracking.py` and `drone_sim/triangulation.py`; see [tracking contracts and results](STAGE2_TRACKING.md). Legacy integration and control remain future design.
 
 Keep `existing-tracker/` as the immutable reference. A future simulator should own its clock, world state, cameras and generated measurements in a separate package. It should run without Unity, YOLO, ESP32 or network access for numerical tests. Unity can later become an optional viewer.
 
@@ -51,7 +51,7 @@ A legacy UDP adapter can observe normalized errors and emulate telemetry for com
 
 ## Proposed typed records
 
-These are design contracts, not implemented files or a finalized wire protocol.
+These are architectural contracts, not a finalized wire protocol. Stage 1 implements point detections and camera calibration; Stage 2 returns image-space track covariance and validated two-camera positions. See the stage documents for the exact implemented record fields and remaining limitations.
 
 | Record | Minimum fields |
 | --- | --- |
