@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stage 1 is merged. Stage 2 tracking and triangulation are implemented for review; see [Stage 2 results](STAGE2_TRACKING.md). Stages 3–6 remain planned. `existing-tracker/` remains unchanged by both stages.
+Status: Stages 1 and 2 are merged. Stage 3 robustness experiments are implemented for review; see [Stage 3 results](STAGE3_ROBUSTNESS.md). Stages 4–6 remain planned. `existing-tracker/` remains unchanged by all simulation stages.
 
 ## First algorithm to implement
 
@@ -46,4 +46,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 2 is implemented on a new branch from merged Stage 1, with 45 automated tests and reproducible error/availability diagnostics. A new PR targets `dev` for review without automatic merge. No dependencies, aircraft control or real-camera integration were added. Later stages require further instructions.
+Stage 3 is implemented on a new branch from merged Stage 2, with 74 automated tests, twelve reproducible fault configurations, unlabeled association, matched error comparisons and explicit identity/latency/availability diagnostics. A new PR targets `dev` for review without automatic merge. No dependencies, aircraft control or real-camera integration were added. Later stages require further instructions.

@@ -1,0 +1,75 @@
+{
+  "ambiguity_margin_m": 0.01,
+  "association_gate_px": 30.0,
+  "cameras": [
+    {
+      "drop_probability": 0.1,
+      "drop_ticks": [],
+      "duplicate_delay_ticks": 1,
+      "duplicate_every": 7,
+      "jitter_ticks": 2,
+      "latency_ticks": 2,
+      "noise_std_px": 1.0,
+      "occlusions": [
+        {
+          "object_id": "object-a",
+          "start": 140,
+          "stop": 185
+        }
+      ],
+      "period_ticks": 1,
+      "phase_ticks": 0,
+      "reorder_delay_ticks": 5,
+      "reorder_every": 11,
+      "timestamp_offset_s": 0.0
+    },
+    {
+      "drop_probability": 0.1,
+      "drop_ticks": [],
+      "duplicate_delay_ticks": 1,
+      "duplicate_every": 5,
+      "jitter_ticks": 1,
+      "latency_ticks": 3,
+      "noise_std_px": 1.0,
+      "occlusions": [],
+      "period_ticks": 2,
+      "phase_ticks": 0,
+      "reorder_delay_ticks": 5,
+      "reorder_every": 0,
+      "timestamp_offset_s": -0.005
+    }
+  ],
+  "dt_s": 0.02,
+  "epipolar_gate_m": 0.5,
+  "name": "combined",
+  "objects": [
+    {
+      "position_enu_m": [
+        -3.0,
+        20.0,
+        4.0
+      ],
+      "target_id": "object-a",
+      "velocity_enu_mps": [
+        1.0,
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    {
+      "position_enu_m": [
+        3.0,
+        20.0,
+        6.0
+      ],
+      "target_id": "object-b",
+      "velocity_enu_mps": [
+        -1.0,
+        0.0,
+        -0.3333333333333333
+      ]
+    }
+  ],
+  "seed": 7,
+  "steps": 300
+}
