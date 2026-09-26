@@ -32,7 +32,9 @@ The supplied defaults select the virtual nodes in Python, while Unity buttons st
 
 Python's 640×480 frame uses x right, y down. Kalman velocities use pixels/second. Unity maps east to +X, north to +Z, up to +Y; GPS conversion currently forces up to zero. A positive Unity Euler X rotates forward down, hence default pitch inversion. Firmware logical sensor axes are forward/right/down, with fixed calibration and a 180° heading correction; true-north alignment is unspecified.
 
-## Proposed separate Python simulator (not implemented)
+## Separate Python simulator: Stage 1 implemented
+
+The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Tracking, localization, legacy integration and control below remain future design.
 
 Keep `existing-tracker/` as the immutable reference. A future simulator should own its clock, world state, cameras and generated measurements in a separate package. It should run without Unity, YOLO, ESP32 or network access for numerical tests. Unity can later become an optional viewer.
 
