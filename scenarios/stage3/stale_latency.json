@@ -1,0 +1,56 @@
+{
+  "ambiguity_margin_m": 0.01,
+  "association_gate_px": 30.0,
+  "cameras": [
+    {
+      "drop_probability": 0.0,
+      "drop_ticks": [],
+      "duplicate_delay_ticks": 1,
+      "duplicate_every": 0,
+      "jitter_ticks": 0,
+      "latency_ticks": 20,
+      "noise_std_px": 0.0,
+      "occlusions": [],
+      "period_ticks": 1,
+      "phase_ticks": 0,
+      "reorder_delay_ticks": 5,
+      "reorder_every": 0,
+      "timestamp_offset_s": 0.0
+    },
+    {
+      "drop_probability": 0.0,
+      "drop_ticks": [],
+      "duplicate_delay_ticks": 1,
+      "duplicate_every": 0,
+      "jitter_ticks": 0,
+      "latency_ticks": 20,
+      "noise_std_px": 0.0,
+      "occlusions": [],
+      "period_ticks": 1,
+      "phase_ticks": 0,
+      "reorder_delay_ticks": 5,
+      "reorder_every": 0,
+      "timestamp_offset_s": 0.0
+    }
+  ],
+  "dt_s": 0.02,
+  "epipolar_gate_m": 0.5,
+  "name": "stale_latency",
+  "objects": [
+    {
+      "position_enu_m": [
+        0.0,
+        20.0,
+        5.0
+      ],
+      "target_id": "target-0",
+      "velocity_enu_mps": [
+        0.5,
+        0.25,
+        0.1
+      ]
+    }
+  ],
+  "seed": 7,
+  "steps": 300
+}
