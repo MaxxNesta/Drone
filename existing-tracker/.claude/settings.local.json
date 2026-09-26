@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git clone https://github.com/novatic14/Distributed-Camera-Node-Tracking-System \"d:\\\\nodetracking\" 2>&1)",
+      "PowerShell(python --version)",
+      "PowerShell(pip --version)"
+    ]
+  }
+}
