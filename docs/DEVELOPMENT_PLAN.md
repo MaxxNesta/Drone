@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stage 1 is implemented for review; see [implementation and validation results](STAGE1_SIMULATOR.md). Stages 2–6 remain planned. `existing-tracker/` is unchanged by Stage 1.
+Status: Stage 1 is merged. Stage 2 tracking and triangulation are implemented for review; see [Stage 2 results](STAGE2_TRACKING.md). Stages 3–6 remain planned. `existing-tracker/` remains unchanged by both stages.
 
 ## First algorithm to implement
 
@@ -46,4 +46,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 1 is implemented in `drone_sim/` with reproducible tests and JSONL diagnostics. No dependencies were installed and no drone flight control was implemented. The change is submitted through a pull request targeting `dev`; later stages require further instructions.
+Stage 2 is implemented on a new branch from merged Stage 1, with 45 automated tests and reproducible error/availability diagnostics. A new PR targets `dev` for review without automatic merge. No dependencies, aircraft control or real-camera integration were added. Later stages require further instructions.

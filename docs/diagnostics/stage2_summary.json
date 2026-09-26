@@ -1,0 +1,246 @@
+[
+  {
+    "command": "python3 -m drone_sim.evaluate --scenario stationary --steps 500 --noise-std 0 --seed 7",
+    "summary": {
+      "availability": {
+        "filtered": 1.0,
+        "raw": 1.0
+      },
+      "frames": 501,
+      "pixel_error_px": {
+        "filtered": {
+          "max": 0.0,
+          "mean": 0.0,
+          "rmse": 0.0,
+          "samples": 1002
+        },
+        "raw": {
+          "max": 0.0,
+          "mean": 0.0,
+          "rmse": 0.0,
+          "samples": 1002
+        }
+      },
+      "position_error_m": {
+        "filtered": {
+          "max": 7.160723346098895e-15,
+          "mean": 7.160723346098947e-15,
+          "rmse": 7.160723346098895e-15,
+          "samples": 501
+        },
+        "raw": {
+          "max": 7.160723346098895e-15,
+          "mean": 7.160723346098947e-15,
+          "rmse": 7.160723346098895e-15,
+          "samples": 501
+        }
+      },
+      "rejections": {
+        "filtered": {},
+        "raw": {}
+      },
+      "track_status_counts": {
+        "tracking": 1002
+      },
+      "type": "summary"
+    }
+  },
+  {
+    "command": "python3 -m drone_sim.evaluate --scenario moving --steps 500 --noise-std 0 --seed 7",
+    "summary": {
+      "availability": {
+        "filtered": 1.0,
+        "raw": 1.0
+      },
+      "frames": 501,
+      "pixel_error_px": {
+        "filtered": {
+          "max": 0.3320694003846784,
+          "mean": 0.02032046953527957,
+          "rmse": 0.03973512054431923,
+          "samples": 1002
+        },
+        "raw": {
+          "max": 0.0,
+          "mean": 0.0,
+          "rmse": 0.0,
+          "samples": 1002
+        }
+      },
+      "position_error_m": {
+        "filtered": {
+          "max": 0.01669561443999589,
+          "mean": 0.0012453442663707091,
+          "rmse": 0.0022650759942828965,
+          "samples": 501
+        },
+        "raw": {
+          "max": 9.989539754686299e-14,
+          "mean": 2.410218120812449e-14,
+          "rmse": 2.995883424472761e-14,
+          "samples": 501
+        }
+      },
+      "rejections": {
+        "filtered": {},
+        "raw": {}
+      },
+      "track_status_counts": {
+        "tracking": 1002
+      },
+      "type": "summary"
+    }
+  },
+  {
+    "command": "python3 -m drone_sim.evaluate --scenario moving --steps 500 --noise-std 1 --seed 7",
+    "summary": {
+      "availability": {
+        "filtered": 1.0,
+        "raw": 0.998003992015968
+      },
+      "frames": 501,
+      "pixel_error_px": {
+        "filtered": {
+          "max": 1.6025552056032293,
+          "mean": 0.37607640227281347,
+          "rmse": 0.4300234446375938,
+          "samples": 1002
+        },
+        "raw": {
+          "max": 3.9149879708967834,
+          "mean": 1.2532181945035705,
+          "rmse": 1.4192950783923013,
+          "samples": 1002
+        }
+      },
+      "position_error_m": {
+        "filtered": {
+          "max": 0.22338694046527338,
+          "mean": 0.0428864613266204,
+          "rmse": 0.05133685205798272,
+          "samples": 501
+        },
+        "raw": {
+          "max": 0.6640696418155784,
+          "mean": 0.14641839744360136,
+          "rmse": 0.17225943441252478,
+          "samples": 500
+        }
+      },
+      "rejections": {
+        "filtered": {},
+        "raw": {
+          "excessive_residual": 1
+        }
+      },
+      "track_status_counts": {
+        "tracking": 1002
+      },
+      "type": "summary"
+    }
+  },
+  {
+    "command": "python3 -m drone_sim.evaluate --scenario dropout --steps 500 --noise-std 1 --seed 7",
+    "summary": {
+      "availability": {
+        "filtered": 0.8602794411177644,
+        "raw": 0.8582834331337326
+      },
+      "frames": 501,
+      "pixel_error_px": {
+        "filtered": {
+          "max": 1.6668760232498019,
+          "mean": 0.3957968719923923,
+          "rmse": 0.4570084873414563,
+          "samples": 862
+        },
+        "raw": {
+          "max": 3.9149879708967834,
+          "mean": 1.2418424057467226,
+          "rmse": 1.4055459232656164,
+          "samples": 862
+        }
+      },
+      "position_error_m": {
+        "filtered": {
+          "max": 0.22338694046527338,
+          "mean": 0.04669791536116661,
+          "rmse": 0.05608895000971862,
+          "samples": 431
+        },
+        "raw": {
+          "max": 0.6533136298599288,
+          "mean": 0.14769650514271856,
+          "rmse": 0.17285824541689962,
+          "samples": 430
+        }
+      },
+      "rejections": {
+        "filtered": {
+          "invalid_observation": 70
+        },
+        "raw": {
+          "excessive_residual": 1,
+          "invalid_observation": 70
+        }
+      },
+      "track_status_counts": {
+        "coasting": 48,
+        "lost": 26,
+        "stale": 66,
+        "tracking": 862
+      },
+      "type": "summary"
+    }
+  },
+  {
+    "command": "python3 -m drone_sim.evaluate --scenario degenerate --steps 500 --noise-std 0 --seed 7",
+    "summary": {
+      "availability": {
+        "filtered": 0.0,
+        "raw": 0.0
+      },
+      "frames": 501,
+      "pixel_error_px": {
+        "filtered": {
+          "max": 0.0,
+          "mean": 0.0,
+          "rmse": 0.0,
+          "samples": 1002
+        },
+        "raw": {
+          "max": 0.0,
+          "mean": 0.0,
+          "rmse": 0.0,
+          "samples": 1002
+        }
+      },
+      "position_error_m": {
+        "filtered": {
+          "max": null,
+          "mean": null,
+          "rmse": null,
+          "samples": 0
+        },
+        "raw": {
+          "max": null,
+          "mean": null,
+          "rmse": null,
+          "samples": 0
+        }
+      },
+      "rejections": {
+        "filtered": {
+          "ill_conditioned": 501
+        },
+        "raw": {
+          "ill_conditioned": 501
+        }
+      },
+      "track_status_counts": {
+        "tracking": 1002
+      },
+      "type": "summary"
+    }
+  }
+]
