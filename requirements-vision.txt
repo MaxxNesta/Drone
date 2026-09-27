@@ -1,0 +1,4 @@
+# Optional recorded-video adapter only. Core simulator remains standard-library-only.
+# Install in an isolated environment when real video inference is needed.
+ultralytics>=8,<9
+av>=12
