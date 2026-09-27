@@ -1,3 +1,7 @@
 /nodetracking.zip
 __pycache__/
 *.py[cod]
+
+/.venv-vision/
+/artifacts/stage5/
+/.vision-cache/

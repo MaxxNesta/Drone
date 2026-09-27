@@ -1,0 +1,234 @@
+{
+  "artifacts": {
+    "annotated.mp4": "sha256:5a12846b1f6b5093fd644820dff34ee3a9046ff45832fa0a46470aaad73145de",
+    "telemetry.jsonl": "sha256:1a32ffb5348fb9eec7d3eadd97aab3a80e3275a3b9e52b60d70bc7ceb9091f80"
+  },
+  "config": {
+    "annotations": null,
+    "camera_id": "demo-recording",
+    "confidence": 0.4,
+    "image_size": 320,
+    "max_frames": null,
+    "output_dir": "artifacts/stage5/observation-loss",
+    "suppress": [
+      [
+        21.0,
+        21.2
+      ],
+      [
+        22.0,
+        23.0
+      ]
+    ],
+    "video": "existing-tracker/Media/Demo Video/CameraTracker.mp4",
+    "weights": "existing-tracker/Software/Python/yolov8n.pt"
+  },
+  "detector": {
+    "class_names": {
+      "0": "person",
+      "1": "bicycle",
+      "2": "car",
+      "3": "motorcycle",
+      "4": "airplane",
+      "5": "bus",
+      "6": "train",
+      "7": "truck",
+      "8": "boat",
+      "9": "traffic light",
+      "10": "fire hydrant",
+      "11": "stop sign",
+      "12": "parking meter",
+      "13": "bench",
+      "14": "bird",
+      "15": "cat",
+      "16": "dog",
+      "17": "horse",
+      "18": "sheep",
+      "19": "cow",
+      "20": "elephant",
+      "21": "bear",
+      "22": "zebra",
+      "23": "giraffe",
+      "24": "backpack",
+      "25": "umbrella",
+      "26": "handbag",
+      "27": "tie",
+      "28": "suitcase",
+      "29": "frisbee",
+      "30": "skis",
+      "31": "snowboard",
+      "32": "sports ball",
+      "33": "kite",
+      "34": "baseball bat",
+      "35": "baseball glove",
+      "36": "skateboard",
+      "37": "surfboard",
+      "38": "tennis racket",
+      "39": "bottle",
+      "40": "wine glass",
+      "41": "cup",
+      "42": "fork",
+      "43": "knife",
+      "44": "spoon",
+      "45": "bowl",
+      "46": "banana",
+      "47": "apple",
+      "48": "sandwich",
+      "49": "orange",
+      "50": "broccoli",
+      "51": "carrot",
+      "52": "hot dog",
+      "53": "pizza",
+      "54": "donut",
+      "55": "cake",
+      "56": "chair",
+      "57": "couch",
+      "58": "potted plant",
+      "59": "bed",
+      "60": "dining table",
+      "61": "toilet",
+      "62": "tv",
+      "63": "laptop",
+      "64": "mouse",
+      "65": "remote",
+      "66": "keyboard",
+      "67": "cell phone",
+      "68": "microwave",
+      "69": "oven",
+      "70": "toaster",
+      "71": "sink",
+      "72": "refrigerator",
+      "73": "book",
+      "74": "clock",
+      "75": "vase",
+      "76": "scissors",
+      "77": "teddy bear",
+      "78": "hair drier",
+      "79": "toothbrush"
+    },
+    "confidence": 0.4,
+    "image_size": 320,
+    "packages": {
+      "av": "15.1.0",
+      "opencv-python": "5.0.0.93",
+      "torch": "2.8.0",
+      "ultralytics": "8.3.200"
+    },
+    "python": "3.12.14",
+    "weights": "sha256:f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36"
+  },
+  "runtime": {
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "machine": "arm64",
+    "model_setup_s": 0.02592766680754721,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "seed": 0,
+    "torch_threads": 1
+  },
+  "schema_version": 1,
+  "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+  "summary": {
+    "accuracy": {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "identity_switches": null,
+      "iou_threshold": 0.5,
+      "labeled_frames": 0,
+      "mean_matched_iou": null,
+      "precision": null,
+      "processing_latency_ms": {
+        "mean": 23.259277073908354,
+        "p95": 27.982749976217747,
+        "samples": 1540
+      },
+      "reacquisitions": null,
+      "recall": null,
+      "schema_version": 1,
+      "tracked_true_positive_fraction": null,
+      "true_positives": 0,
+      "unlabeled_frames": 1540
+    },
+    "accuracy_status": "blocked_no_manual_annotations",
+    "capture_span_s": 51.3,
+    "class_detection_counts": {
+      "0": 592,
+      "28": 18,
+      "32": 109,
+      "56": 8,
+      "62": 398,
+      "63": 1,
+      "66": 3,
+      "67": 19,
+      "73": 21
+    },
+    "export_throughput_fps": 27.857487551548424,
+    "frames": 1540,
+    "latency_ms": {
+      "decode": {
+        "max": 117.10595898330212,
+        "mean": 8.620051453615744,
+        "p50": 8.549083024263382,
+        "p95": 13.441333081573248,
+        "samples": 1540
+      },
+      "detection": {
+        "max": 63.88079095631838,
+        "mean": 14.401710926337385,
+        "p50": 14.264833880588412,
+        "p95": 15.617332886904478,
+        "samples": 1540
+      },
+      "pipeline_with_render": {
+        "max": 211.73133398406208,
+        "mean": 35.649238376690725,
+        "p50": 34.20675010420382,
+        "p95": 52.59991716593504,
+        "samples": 1540
+      },
+      "render_encode": {
+        "max": 78.43379187397659,
+        "mean": 12.389961302782373,
+        "p50": 10.718042030930519,
+        "p95": 26.937833055853844,
+        "samples": 1540
+      },
+      "total": {
+        "max": 181.01633386686444,
+        "mean": 23.259277073908354,
+        "p50": 23.148749954998493,
+        "p95": 27.982749976217747,
+        "samples": 1540
+      },
+      "tracking": {
+        "max": 0.9851250797510147,
+        "mean": 0.2375146939552256,
+        "p50": 0.1360410824418068,
+        "p95": 0.7224171422421932,
+        "samples": 1540
+      }
+    },
+    "raw_detections": 1169,
+    "raw_multiple_detection_frames": 352,
+    "raw_zero_detection_frames": 1010,
+    "state_transitions": {
+      "None->tracking": 229,
+      "coasting->stale": 269,
+      "coasting->tracking": 113,
+      "stale->lost": 229,
+      "stale->tracking": 40,
+      "tracking->coasting": 382
+    },
+    "suppressed_frames": 36,
+    "track_state_samples": {
+      "coasting": 2219,
+      "lost": 229,
+      "stale": 3626,
+      "tracking": 1041
+    },
+    "tracking_rejections": {},
+    "unique_assigned_ids": 229,
+    "wall_s_including_export": 55.281367250019684
+  }
+}
