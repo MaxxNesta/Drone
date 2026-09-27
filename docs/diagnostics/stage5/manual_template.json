@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "annotation_kind": "manual_template_not_ground_truth",
+  "frames": [
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 0,
+        "capture_time_s": 0.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 0,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 300,
+        "capture_time_s": 10.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 153600,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 600,
+        "capture_time_s": 20.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 307200,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 601,
+        "capture_time_s": 20.033333333333335,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 307712,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 602,
+        "capture_time_s": 20.066666666666666,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 308224,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 630,
+        "capture_time_s": 21.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 322560,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 631,
+        "capture_time_s": 21.033333333333335,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 323072,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 632,
+        "capture_time_s": 21.066666666666666,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 323584,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 660,
+        "capture_time_s": 22.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 337920,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 661,
+        "capture_time_s": 22.033333333333335,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 338432,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 662,
+        "capture_time_s": 22.066666666666666,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 338944,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 900,
+        "capture_time_s": 30.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 460800,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 1200,
+        "capture_time_s": 40.0,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 614400,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 1201,
+        "capture_time_s": 40.03333333333333,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 614912,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    },
+    {
+      "metadata": {
+        "source_id": "sha256:c5d7b9e27a89d705bfbadf8aec469c3b99ec3e1a4df9ee13efcde73ab5b076b3",
+        "camera_id": "demo-recording",
+        "frame_sequence": 1202,
+        "capture_time_s": 40.06666666666667,
+        "image_size": [
+          1920,
+          1080
+        ],
+        "time_domain": "video_pts",
+        "timestamp_provenance": "container_presentation_timestamp",
+        "pts": 615424,
+        "time_base": [
+          1,
+          15360
+        ],
+        "schema_version": 2
+      },
+      "reviewed": false,
+      "objects": null
+    }
+  ]
+}

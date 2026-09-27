@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stages 1–3 are merged. Stage 4 recorded-video integration is implemented for review; see [Stage 4 results](STAGE4_INTEGRATION.md). Stages 5–6 remain planned. `existing-tracker/` remains unchanged by all simulation stages.
+Status: Stages 1–4 are merged. Stage 5 real recorded-video tools and execution results are implemented for review; see [Stage 5 validation](STAGE5_VALIDATION.md). Accuracy and identity validation remain blocked on independent manual labels. Stage 6 remains planned.
 
 ## First algorithm to implement
 
@@ -46,4 +46,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 4 implements the owner’s revised recorded-video integration scope, superseding the earlier optional UDP/Unity proposal. The complete 98-test suite passes without optional detector dependencies. A new PR targets `dev` for review without automatic merge. Real detector performance remains unmeasured; representative labeled footage and an explicitly selected runtime/model are needed for Stage 5. No legacy code, aircraft control or real stereo integration was changed.
+Stage 5 ran the complete decoder/detector/tracker/export pipeline on the existing demonstration with the unchanged local YOLO checkpoint. Full video, telemetry, measured timings, controlled observation-loss diagnostics and unfilled manual-labeling tools are available. All 108 tests pass in the optional runtime (the core-only run skips its one codec test). The new PR targets `dev` without automatic merge. Successful execution is not validated detection accuracy: no manual ground truth exists, and the composed demonstration is not representative deployment footage. Obtain independently reviewed labels before drawing accuracy/identity conclusions or tuning algorithms. No aircraft control or real stereo integration was added.

@@ -77,3 +77,7 @@ The existing simulator can test legacy message formatting and display behavior. 
 `Stage 1 Detection v1 → from_simulation → ObservationFrame v2 → ObservationTracker`
 
 The common v2 frame preserves source/camera identity, original image coordinates, clock provenance and timestamps; it carries unlabeled detections, not truth object identities. Scorer-only annotation records remain separate. The tracker reuses Stage 2/3 image-plane estimation without inventing camera calibration. Real observations are not wired to the Stage 2 triangulator. Recorded video is the primary source; webcam receipt timestamps are explicitly weaker than exposure timestamps. Original Stage 1–3 contracts remain unchanged. See [Stage 4](STAGE4_INTEGRATION.md) for commands, scoring definitions and limitations.
+
+## Stage 5 validation tooling
+
+`vision.validate` composes the unchanged Stage 4 decoder, local YOLO detector and observation tracker with measured timings and a timestamp-preserving annotated video exporter. Raw detector evidence remains separate from explicitly injected observation suppression. `vision.annotations` exports original frames and unfilled review-required templates; labels enter only the scorer. Runtime and source/model fingerprints accompany reports. See [Stage 5 validation](STAGE5_VALIDATION.md) for actual execution results, the pinned optional environment and unvalidated accuracy/occlusion claims. No new real-world depth or control boundary is introduced.
