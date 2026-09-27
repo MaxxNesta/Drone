@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "iou_threshold": 0.5,
+  "labeled_frames": 6,
+  "unlabeled_frames": 0,
+  "true_positives": 3,
+  "false_positives": 1,
+  "false_negatives": 3,
+  "precision": 0.75,
+  "recall": 0.5,
+  "mean_matched_iou": 1.0,
+  "identity_switches": 1,
+  "reacquisitions": 1,
+  "tracked_true_positive_fraction": 1.0,
+  "processing_latency_ms": {
+    "samples": 0,
+    "mean": null,
+    "p95": null
+  }
+}

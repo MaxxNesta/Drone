@@ -34,7 +34,7 @@ Python's 640×480 frame uses x right, y down. Kalman velocities use pixels/secon
 
 ## Separate Python simulator: Stages 1–3
 
-The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Stage 2 adds `drone_sim/tracking.py` and `drone_sim/triangulation.py`; see [tracking contracts and results](STAGE2_TRACKING.md). Stage 3 adds `drone_sim/robustness/` for fault injection, unlabeled association and truth-isolated scoring; see [robustness results and contracts](STAGE3_ROBUSTNESS.md). Legacy integration and control remain future design.
+The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Stage 2 adds `drone_sim/tracking.py` and `drone_sim/triangulation.py`; see [tracking contracts and results](STAGE2_TRACKING.md). Stage 3 adds `drone_sim/robustness/` for fault injection, unlabeled association and truth-isolated scoring; see [robustness results and contracts](STAGE3_ROBUSTNESS.md). Stage 4 adds the isolated `drone_sim/vision/` adapter; see [recorded-video contracts and limitations](STAGE4_INTEGRATION.md). Control remains future design.
 
 Keep `existing-tracker/` as the immutable reference. A future simulator should own its clock, world state, cameras and generated measurements in a separate package. It should run without Unity, YOLO, ESP32 or network access for numerical tests. Unity can later become an optional viewer.
 
@@ -69,3 +69,11 @@ Start with in-process records for deterministic tests; add a versioned localhost
 ## Validation boundary
 
 The existing simulator can test legacy message formatting and display behavior. It cannot validate world geometry or drone behavior. The first new simulation should expose ground truth and independent per-camera observations so filter and localization error can be measured. See [development plan](DEVELOPMENT_PLAN.md) for staged acceptance criteria and [audit](TRACKER_AUDIT.md) for defects that must not be copied into the new design.
+
+## Stage 4 image-observation boundary
+
+`video_frames → optional YoloDetector → ObservationFrame v2 → ObservationTracker`
+
+`Stage 1 Detection v1 → from_simulation → ObservationFrame v2 → ObservationTracker`
+
+The common v2 frame preserves source/camera identity, original image coordinates, clock provenance and timestamps; it carries unlabeled detections, not truth object identities. Scorer-only annotation records remain separate. The tracker reuses Stage 2/3 image-plane estimation without inventing camera calibration. Real observations are not wired to the Stage 2 triangulator. Recorded video is the primary source; webcam receipt timestamps are explicitly weaker than exposure timestamps. Original Stage 1–3 contracts remain unchanged. See [Stage 4](STAGE4_INTEGRATION.md) for commands, scoring definitions and limitations.
