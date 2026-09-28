@@ -1,0 +1,76 @@
+{
+  "coverage_model": "ideal disk swath along nominal survey legs, not measured sensor coverage",
+  "estimates": {
+    "approximate_duration_s": 19.08531856814802,
+    "cruise_only_time_s": 7.140735033951986,
+    "duration_model": "rest-to-rest acceleration-limited legs + configured dwell/settling allowance; excludes drag/PD lag",
+    "route_distance_m": 21.42220510185596,
+    "survey_distance_m": 0.0,
+    "transit_distance_m": 21.42220510185596
+  },
+  "execution": {
+    "battery_final_fraction": 0.9942273966698033,
+    "completed_waypoints": 3,
+    "completion_time_s": 22.44,
+    "duration_error_s": 3.354681431851983,
+    "duration_s": 22.44,
+    "events": [
+      {
+        "kind": "mission_started",
+        "tick": 0,
+        "time_s": 0.0
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 299,
+        "time_s": 5.98,
+        "waypoint_index": 0
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 798,
+        "time_s": 15.96,
+        "waypoint_index": 1
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 1122,
+        "time_s": 22.44,
+        "waypoint_index": 2
+      },
+      {
+        "kind": "mission_completed",
+        "tick": 1122,
+        "time_s": 22.44
+      }
+    ],
+    "execution_failure": null,
+    "final_mission_state": "completed",
+    "final_position_enu_m": [
+      0.00042874434427349524,
+      0.00028582956284899574,
+      2.069525326006544
+    ],
+    "final_waypoint_error_m": 0.06952723550212517,
+    "maximum_acceleration_mps2": 2.0,
+    "maximum_speed_mps": 3.0000000000000004,
+    "planning_estimates": {
+      "approximate_duration_s": 19.08531856814802,
+      "cruise_only_time_s": 7.140735033951986,
+      "duration_model": "rest-to-rest acceleration-limited legs + configured dwell/settling allowance; excludes drag/PD lag",
+      "route_distance_m": 21.42220510185596,
+      "survey_distance_m": 0.0,
+      "transit_distance_m": 21.42220510185596
+    },
+    "samples": 1123,
+    "schema_version": 1,
+    "stop_reason": null
+  },
+  "planned_coverage": null,
+  "schema_version": 1,
+  "validation": {
+    "reasons": [],
+    "valid": true
+  },
+  "validation_scope": "nominal route geometry and capability limits; execution may still fail"
+}

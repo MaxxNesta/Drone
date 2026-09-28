@@ -1,0 +1,167 @@
+{
+  "coverage_model": "ideal disk swath along nominal survey legs, not measured sensor coverage",
+  "estimates": {
+    "approximate_duration_s": 106.74797116537819,
+    "cruise_only_time_s": 39.35463648538215,
+    "duration_model": "rest-to-rest acceleration-limited legs + configured dwell/settling allowance; excludes drag/PD lag",
+    "route_distance_m": 118.06390945614646,
+    "survey_distance_m": 78.40812564174328,
+    "transit_distance_m": 39.65578381440318
+  },
+  "execution": {
+    "battery_final_fraction": 0.9677939500745469,
+    "completed_waypoints": 17,
+    "completion_time_s": 125.34,
+    "duration_error_s": 18.592028834621814,
+    "duration_s": 125.34,
+    "events": [
+      {
+        "kind": "mission_started",
+        "tick": 0,
+        "time_s": 0.0
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 299,
+        "time_s": 5.98,
+        "waypoint_index": 0
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 630,
+        "time_s": 12.6,
+        "waypoint_index": 1
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 1108,
+        "time_s": 22.16,
+        "waypoint_index": 2
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 1400,
+        "time_s": 28.0,
+        "waypoint_index": 3
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 1829,
+        "time_s": 36.58,
+        "waypoint_index": 4
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 2130,
+        "time_s": 42.6,
+        "waypoint_index": 5
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 2514,
+        "time_s": 50.28,
+        "waypoint_index": 6
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 2806,
+        "time_s": 56.120000000000005,
+        "waypoint_index": 7
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 3138,
+        "time_s": 62.76,
+        "waypoint_index": 8
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 3439,
+        "time_s": 68.78,
+        "waypoint_index": 9
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 3686,
+        "time_s": 73.72,
+        "waypoint_index": 10
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 4167,
+        "time_s": 83.34,
+        "waypoint_index": 11
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 4659,
+        "time_s": 93.18,
+        "waypoint_index": 12
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 5149,
+        "time_s": 102.98,
+        "waypoint_index": 13
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 5639,
+        "time_s": 112.78,
+        "waypoint_index": 14
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 5968,
+        "time_s": 119.36,
+        "waypoint_index": 15
+      },
+      {
+        "kind": "waypoint_reached",
+        "tick": 6267,
+        "time_s": 125.34,
+        "waypoint_index": 16
+      },
+      {
+        "kind": "mission_completed",
+        "tick": 6267,
+        "time_s": 125.34
+      }
+    ],
+    "execution_failure": null,
+    "final_mission_state": "completed",
+    "final_position_enu_m": [
+      -2.9994191551868674,
+      -2.9994171670079353,
+      2.069632255161318
+    ],
+    "final_waypoint_error_m": 0.06963711678296645,
+    "maximum_acceleration_mps2": 2.0000000000000004,
+    "maximum_speed_mps": 3.0000000000000004,
+    "planning_estimates": {
+      "approximate_duration_s": 106.74797116537819,
+      "cruise_only_time_s": 39.35463648538215,
+      "duration_model": "rest-to-rest acceleration-limited legs + configured dwell/settling allowance; excludes drag/PD lag",
+      "route_distance_m": 118.06390945614646,
+      "survey_distance_m": 78.40812564174328,
+      "transit_distance_m": 39.65578381440318
+    },
+    "samples": 6268,
+    "schema_version": 1,
+    "stop_reason": null
+  },
+  "planned_coverage": {
+    "assumed_swath_width_m": 3,
+    "covered_fraction": 1.0,
+    "covered_samples": 353,
+    "maximum_distance_to_route_m": 1.2543056593197934,
+    "sample_spacing_m": 0.5,
+    "samples": 353
+  },
+  "schema_version": 1,
+  "validation": {
+    "reasons": [],
+    "valid": true
+  },
+  "validation_scope": "nominal route geometry and capability limits; execution may still fail"
+}

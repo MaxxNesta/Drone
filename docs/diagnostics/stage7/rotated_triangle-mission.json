@@ -1,0 +1,196 @@
+{
+  "acceleration_limit_mps2": 2.0,
+  "altitude_m": 5,
+  "coordinate_frame": "ENU",
+  "flight_boundary": [
+    [
+      -8.0,
+      -8.0
+    ],
+    [
+      22.0,
+      -8.0
+    ],
+    [
+      22.0,
+      20.0
+    ],
+    [
+      -8.0,
+      20.0
+    ]
+  ],
+  "home_enu_m": [
+    -3.0,
+    -3.0,
+    2.0
+  ],
+  "lane_spacing_m": 3,
+  "metadata": {},
+  "mission_id": "rotated-triangle",
+  "orientation_deg": 35,
+  "position_tolerance_m": 0.1,
+  "schema_version": 1,
+  "settle_s": 0.5,
+  "settling_allowance_s": 2.0,
+  "speed_limit_mps": 3.0,
+  "speed_tolerance_mps": 0.1,
+  "start_enu_m": [
+    -3.0,
+    -3.0,
+    2.0
+  ],
+  "survey_area": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      14.0,
+      0.0
+    ],
+    [
+      7.0,
+      12.0
+    ]
+  ],
+  "swath_width_m": 3,
+  "waypoints": [
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        -3.0,
+        -3.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        0.13775858733513494,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_lane",
+      "position_enu_m": [
+        7.7,
+        10.8,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        9.1,
+        8.4,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_lane",
+      "position_enu_m": [
+        3.218256679038438,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        6.298754770741741,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_lane",
+      "position_enu_m": [
+        10.5,
+        6.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        11.899999999999999,
+        3.5999999999999996,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_lane",
+      "position_enu_m": [
+        9.379252862445046,
+        8.881784197001252e-16,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        12.459750954148348,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_lane",
+      "position_enu_m": [
+        13.299999999999999,
+        1.2000000000000002,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "transit",
+      "position_enu_m": [
+        0.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_boundary",
+      "position_enu_m": [
+        14.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_boundary",
+      "position_enu_m": [
+        7.0,
+        12.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "survey_boundary",
+      "position_enu_m": [
+        0.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "return_home",
+      "position_enu_m": [
+        -3.0,
+        -3.0,
+        5.0
+      ]
+    },
+    {
+      "leg_kind": "return_home",
+      "position_enu_m": [
+        -3.0,
+        -3.0,
+        2.0
+      ]
+    }
+  ]
+}

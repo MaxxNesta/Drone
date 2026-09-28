@@ -1,0 +1,33 @@
+{
+  "base_commit": "c57ba93652df4064a660096847e8118e6ab6cb83",
+  "unchanged_prior_tracked_files": 69,
+  "preservation_check": "git diff against merge base, respecting repository text normalization",
+  "replays": {
+    "concave_boundary": {
+      "exact_json_replay": true,
+      "samples": 2430
+    },
+    "rectangle": {
+      "exact_json_replay": true,
+      "samples": 6618
+    },
+    "return_home": {
+      "exact_json_replay": true,
+      "samples": 1123
+    },
+    "rotated_triangle": {
+      "exact_json_replay": true,
+      "samples": 6268
+    }
+  },
+  "core_tests": {
+    "run": 171,
+    "passed": 168,
+    "skipped": 3
+  },
+  "optional_environment_tests": {
+    "run": 171,
+    "passed": 171,
+    "skipped": 0
+  }
+}

@@ -87,3 +87,9 @@ The common v2 frame preserves source/camera identity, original image coordinates
 `drone_sim/vehicle/` owns simplified ENU vehicle truth, bounded PD motion, waypoint execution and virtual safety policy. It imports the common `FixedStepClock`, not perception/association/triangulation code. Stage 1 now uses the same clock primitive with unchanged frames and public contracts. A future orchestrator may advance one clock, step the vehicle, and pass its truth to separate camera projection code; observations and estimated state must remain separate from this truth.
 
 Vehicle telemetry and mission commands form in-process boundaries for a future website/service. No transport or physical command mapping exists. Pause means bounded position holding; abort/emergency/geofence/critical-battery stops deliberately freeze the virtual state and are not aircraft safety algorithms. See [Stage 6 model, lifecycle and results](STAGE6_VEHICLE.md).
+
+## Stage 7 independent planning boundary
+
+`planning/geometry.py`, `mission.py` and `routes.py` produce versioned civilian-survey mission data from local ENU polygons. They do not import vehicle physics or perception. Explicit home/start, cruise altitude, speed/acceleration limits, footprint assumptions and route legs are validated before the optional execution adapter creates Stage 6 waypoints. The existing Stage 6 engine remains the sole owner of lifecycle, control, dynamics and clock behavior.
+
+The adapter can preview an existing-engine step and invoke its virtual stop before a polygon-boundary crossing. A nominally valid route is not proof of executable coverage. Standalone virtual return-home planning does not replace a live mission or resume an aborted engine. See [Stage 7 planning, estimates and failures](STAGE7_PLANNING.md).
