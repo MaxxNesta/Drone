@@ -1,0 +1,48 @@
+{
+  "battery_final_fraction": 0.9857890693080531,
+  "completed_waypoints": 3,
+  "completion_time_s": 25.060000000000002,
+  "duration_s": 60.0,
+  "events": [
+    {
+      "kind": "mission_started",
+      "tick": 0,
+      "time_s": 0.0
+    },
+    {
+      "kind": "waypoint_reached",
+      "tick": 406,
+      "time_s": 8.120000000000001,
+      "waypoint_index": 0
+    },
+    {
+      "kind": "waypoint_reached",
+      "tick": 808,
+      "time_s": 16.16,
+      "waypoint_index": 1
+    },
+    {
+      "kind": "waypoint_reached",
+      "tick": 1253,
+      "time_s": 25.060000000000002,
+      "waypoint_index": 2
+    },
+    {
+      "kind": "mission_completed",
+      "tick": 1253,
+      "time_s": 25.060000000000002
+    }
+  ],
+  "final_mission_state": "completed",
+  "final_position_enu_m": [
+    3.3409689270499895e-13,
+    3.3431015806554917e-13,
+    2.0000000000001
+  ],
+  "final_waypoint_error_m": 4.830818112210928e-13,
+  "maximum_acceleration_mps2": 3.0000000000000004,
+  "maximum_speed_mps": 4.72392774621798,
+  "samples": 3001,
+  "schema_version": 1,
+  "stop_reason": null
+}

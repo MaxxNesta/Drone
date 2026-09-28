@@ -1,0 +1,2 @@
+# Optional diagnostics only; the vehicle engine and CSV/JSONL exports need only stdlib.
+matplotlib==3.11.2

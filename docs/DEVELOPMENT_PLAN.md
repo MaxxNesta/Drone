@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stages 1–4 are merged. Stage 5 real recorded-video tools and execution results are implemented for review; see [Stage 5 validation](STAGE5_VALIDATION.md). Accuracy and identity validation remain blocked on independent manual labels. Stage 6 remains planned.
+Status: Stages 1–5 are merged. Stage 6 independent virtual vehicle simulation is implemented for review; see [Stage 6 results](STAGE6_VEHICLE.md). Real-video accuracy/identity validation still requires independent manual labels.
 
 ## First algorithm to implement
 
@@ -23,7 +23,7 @@ This is the smallest useful first algorithm because it supplies independent, geo
 | 3: failure scenarios | Seeded noise, irregular observation rates, latency, stale/duplicate packets, dropped frames, occlusion, crossings and reacquisition. | Report identity switches, tracking availability, pixel/3D RMSE and latency. Stale observations never count as fresh detections; centered targets stay valid. Scenario-specific thresholds are declared before benchmarking. |
 | 4: existing tracker integration | Isolated recorded-video YOLO adapter; versioned image observations shared with simulation; original timestamps, dimensions, confidence and camera identity; optional webcam; no motor/Unity bridge. | Offline fixtures verify conversion, lifecycle states, identity continuity, detection scoring and processing latency; legacy code unchanged. Real 3D remains unsupported without independent calibrated/synchronized cameras. |
 | 5: real detector validation | Isolated environment with selected pinned versions only when needed; labeled recorded footage; explicit checkpoint path and verified class mapping; detector produces the same record contract as synthetic detections. | Precision/recall or relevant detection metrics, target continuity, measured latency and filter error on held-out footage. No unsupported drone-detection claim. |
-| 6: future vehicle behavior | Only after a separate instruction defines the drone's role, simulator fidelity, objectives and constraints: introduce virtual dynamics and then evaluate a suitable controller. | Requirements and evaluation criteria agreed before implementation; perception and flight-control interfaces remain distinct. |
+| 6: independent virtual vehicle | Fixed-step ENU point-mass dynamics, bounded PD control, waypoint mission states, battery/geofence monitoring, explicit virtual stops and structured telemetry/plots. | Convergence, norm limits, deterministic replay, waypoint completion, pause/resume and safety tests; vehicle truth remains separate from perception; no physical aircraft or website integration. |
 
 ## Fix order for future working copies
 
@@ -46,4 +46,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 5 ran the complete decoder/detector/tracker/export pipeline on the existing demonstration with the unchanged local YOLO checkpoint. Full video, telemetry, measured timings, controlled observation-loss diagnostics and unfilled manual-labeling tools are available. All 108 tests pass in the optional runtime (the core-only run skips its one codec test). The new PR targets `dev` without automatic merge. Successful execution is not validated detection accuracy: no manual ground truth exists, and the composed demonstration is not representative deployment footage. Obtain independently reviewed labels before drawing accuracy/identity conclusions or tuning algorithms. No aircraft control or real stereo integration was added.
+Stage 6 is implemented on a new branch from reviewed/merged Stage 5. All 138 tests pass with optional dependencies (136 pass and two optional tests skip in the core-only environment). Five reproducible scenarios demonstrate waypoint completion, pause/resume, emergency stopping, battery monitoring and geofence rejection. The new PR targets `dev` without automatic merge. The point-mass physics and instantaneous virtual safety stops do not validate real quadcopter behavior. Future perception coupling, mission-control transport, realistic dynamics or physical integration require separate instructions and validation.

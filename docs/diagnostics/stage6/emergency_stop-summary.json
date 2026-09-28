@@ -1,0 +1,36 @@
+{
+  "battery_final_fraction": 0.9992254192252765,
+  "completed_waypoints": 0,
+  "completion_time_s": null,
+  "duration_s": 10.0,
+  "events": [
+    {
+      "kind": "mission_started",
+      "tick": 0,
+      "time_s": 0.0
+    },
+    {
+      "kind": "virtual_stop",
+      "reason": "emergency_stop",
+      "tick": 100,
+      "time_s": 2.0,
+      "velocity_reset_enu_mps": [
+        -4.975185951049945,
+        -0.0,
+        -0.4975185951049946
+      ]
+    }
+  ],
+  "final_mission_state": "aborted",
+  "final_position_enu_m": [
+    5.46436165132959,
+    0.0,
+    2.5464361651329575
+  ],
+  "final_waypoint_error_m": 24.658011368894158,
+  "maximum_acceleration_mps2": 2.9999999999999996,
+  "maximum_speed_mps": 5.0,
+  "samples": 501,
+  "schema_version": 1,
+  "stop_reason": "emergency_stop"
+}

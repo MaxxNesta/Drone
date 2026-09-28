@@ -1,0 +1,78 @@
+{
+  "actions": [
+    {
+      "command": "start",
+      "tick": 0
+    },
+    {
+      "command": "emergency_stop",
+      "tick": 100
+    }
+  ],
+  "scenario_id": "emergency-stop",
+  "schema_version": 1,
+  "steps": 500,
+  "vehicle": {
+    "battery": {
+      "acceleration_drain_per_mps": 2e-05,
+      "critical_fraction": 0.1,
+      "idle_drain_per_s": 0.0002,
+      "low_fraction": 0.2,
+      "speed_drain_per_m": 5e-05
+    },
+    "controller": {
+      "kd": 2.2,
+      "kp": 1.2
+    },
+    "drag_per_s": 0.15,
+    "dt_s": 0.02,
+    "geofence": {
+      "maximum_enu_m": [
+        50.0,
+        50.0,
+        30.0
+      ],
+      "minimum_enu_m": [
+        -50.0,
+        -50.0,
+        0.0
+      ]
+    },
+    "initial_state": {
+      "acceleration_enu_mps2": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "battery_fraction": 1.0,
+      "heading_rad": 0.0,
+      "position_enu_m": [
+        0.0,
+        0.0,
+        2.0
+      ],
+      "velocity_enu_mps": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "limits": {
+      "max_acceleration_mps2": 3.0,
+      "max_heading_rate_radps": 1.5,
+      "max_speed_mps": 5.0
+    }
+  },
+  "waypoints": [
+    {
+      "position_enu_m": [
+        30,
+        0,
+        5
+      ],
+      "position_tolerance_m": 0.1,
+      "settle_s": 0.5,
+      "speed_tolerance_mps": 0.1
+    }
+  ]
+}

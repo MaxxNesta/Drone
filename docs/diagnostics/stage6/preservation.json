@@ -1,0 +1,6 @@
+{
+  "base_commit": "a23f80c",
+  "unchanged_legacy_and_prior_source_files": 61,
+  "only_existing_source_change": "drone_sim/core.py now uses shared FixedStepClock with identical frames",
+  "stage1_exact_frame_comparisons": 8
+}
