@@ -5,3 +5,5 @@ __pycache__/
 /.venv-vision/
 /artifacts/stage5/
 /.vision-cache/
+
+/artifacts/stage6/

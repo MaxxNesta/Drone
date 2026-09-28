@@ -1,5 +1,6 @@
 """ENU meters -> calibrated optical right/down/forward -> image pixels."""
 from dataclasses import dataclass
+from .clock import FixedStepClock
 from math import isclose, isfinite, sqrt
 from typing import Iterator, Optional, Tuple
 
@@ -166,8 +167,9 @@ def default_scenario(dt_s: float = 0.02, steps: int = 100) -> Scenario:
 def simulate(scenario: Scenario) -> Iterator[Frame]:
     """Yield the initial frame plus `steps` updates, with no wall-clock access."""
     truth = scenario.target
+    clock = FixedStepClock(scenario.dt_s)
     for tick in range(scenario.steps + 1):
-        timestamp = tick * scenario.dt_s
+        timestamp = clock.time_s
         observations = []
         for camera in scenario.cameras:
             pixel, reason = camera.project(truth.position_enu_m)
@@ -180,3 +182,4 @@ def simulate(scenario: Scenario) -> Iterator[Frame]:
             position = tuple(p + v * scenario.dt_s for p, v in
                              zip(truth.position_enu_m, truth.velocity_enu_mps))
             truth = Target(position, truth.velocity_enu_mps, truth.target_id)
+            clock = clock.advance()

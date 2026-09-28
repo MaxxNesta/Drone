@@ -1,0 +1,41 @@
+{
+  "battery_final_fraction": 0.09941041922527699,
+  "completed_waypoints": 0,
+  "completion_time_s": null,
+  "duration_s": 20.0,
+  "events": [
+    {
+      "kind": "mission_started",
+      "tick": 0,
+      "time_s": 0.0
+    },
+    {
+      "kind": "battery_low",
+      "tick": 17,
+      "time_s": 0.34
+    },
+    {
+      "kind": "virtual_stop",
+      "reason": "critical_battery",
+      "tick": 183,
+      "time_s": 3.66,
+      "velocity_reset_enu_mps": [
+        -4.975185951049945,
+        -0.0,
+        -0.4975185951049957
+      ]
+    }
+  ],
+  "final_mission_state": "aborted",
+  "final_position_enu_m": [
+    13.723170330072527,
+    0.0,
+    3.3723170330072443
+  ],
+  "final_waypoint_error_m": 16.35801136889413,
+  "maximum_acceleration_mps2": 2.9999999999999996,
+  "maximum_speed_mps": 5.0,
+  "samples": 1001,
+  "schema_version": 1,
+  "stop_reason": "critical_battery"
+}

@@ -34,7 +34,7 @@ Python's 640×480 frame uses x right, y down. Kalman velocities use pixels/secon
 
 ## Separate Python simulator: Stages 1–3
 
-The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Stage 2 adds `drone_sim/tracking.py` and `drone_sim/triangulation.py`; see [tracking contracts and results](STAGE2_TRACKING.md). Stage 3 adds `drone_sim/robustness/` for fault injection, unlabeled association and truth-isolated scoring; see [robustness results and contracts](STAGE3_ROBUSTNESS.md). Stage 4 adds the isolated `drone_sim/vision/` adapter; see [recorded-video contracts and limitations](STAGE4_INTEGRATION.md). Control remains future design.
+The target-motion and camera-observation layer is implemented in `drone_sim/`; see [Stage 1 usage and contracts](STAGE1_SIMULATOR.md). Stage 2 adds `drone_sim/tracking.py` and `drone_sim/triangulation.py`; see [tracking contracts and results](STAGE2_TRACKING.md). Stage 3 adds `drone_sim/robustness/` for fault injection, unlabeled association and truth-isolated scoring; see [robustness results and contracts](STAGE3_ROBUSTNESS.md). Stage 4 adds the isolated `drone_sim/vision/` adapter; see [recorded-video contracts and limitations](STAGE4_INTEGRATION.md). Stage 6 adds independent software-only vehicle dynamics; physical control remains outside scope.
 
 Keep `existing-tracker/` as the immutable reference. A future simulator should own its clock, world state, cameras and generated measurements in a separate package. It should run without Unity, YOLO, ESP32 or network access for numerical tests. Unity can later become an optional viewer.
 
@@ -81,3 +81,9 @@ The common v2 frame preserves source/camera identity, original image coordinates
 ## Stage 5 validation tooling
 
 `vision.validate` composes the unchanged Stage 4 decoder, local YOLO detector and observation tracker with measured timings and a timestamp-preserving annotated video exporter. Raw detector evidence remains separate from explicitly injected observation suppression. `vision.annotations` exports original frames and unfilled review-required templates; labels enter only the scorer. Runtime and source/model fingerprints accompany reports. See [Stage 5 validation](STAGE5_VALIDATION.md) for actual execution results, the pinned optional environment and unvalidated accuracy/occlusion claims. No new real-world depth or control boundary is introduced.
+
+## Stage 6 independent vehicle simulation
+
+`drone_sim/vehicle/` owns simplified ENU vehicle truth, bounded PD motion, waypoint execution and virtual safety policy. It imports the common `FixedStepClock`, not perception/association/triangulation code. Stage 1 now uses the same clock primitive with unchanged frames and public contracts. A future orchestrator may advance one clock, step the vehicle, and pass its truth to separate camera projection code; observations and estimated state must remain separate from this truth.
+
+Vehicle telemetry and mission commands form in-process boundaries for a future website/service. No transport or physical command mapping exists. Pause means bounded position holding; abort/emergency/geofence/critical-battery stops deliberately freeze the virtual state and are not aircraft safety algorithms. See [Stage 6 model, lifecycle and results](STAGE6_VEHICLE.md).
