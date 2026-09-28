@@ -1,0 +1,71 @@
+{
+  "acceleration_limit_mps2": 2.0,
+  "altitude_m": 6,
+  "coordinate_frame": "ENU",
+  "flight_boundary": [
+    [
+      -5.0,
+      -5.0
+    ],
+    [
+      20.0,
+      -5.0
+    ],
+    [
+      20.0,
+      15.0
+    ],
+    [
+      -5.0,
+      15.0
+    ]
+  ],
+  "home_enu_m": [
+    0.0,
+    0.0,
+    2.0
+  ],
+  "lane_spacing_m": null,
+  "metadata": {},
+  "mission_id": "virtual-return-home",
+  "orientation_deg": null,
+  "position_tolerance_m": 0.1,
+  "schema_version": 1,
+  "settle_s": 0.5,
+  "settling_allowance_s": 2.0,
+  "speed_limit_mps": 3.0,
+  "speed_tolerance_mps": 0.1,
+  "start_enu_m": [
+    12.0,
+    8.0,
+    3.0
+  ],
+  "survey_area": null,
+  "swath_width_m": null,
+  "waypoints": [
+    {
+      "leg_kind": "return_home",
+      "position_enu_m": [
+        12.0,
+        8.0,
+        6.0
+      ]
+    },
+    {
+      "leg_kind": "return_home",
+      "position_enu_m": [
+        0.0,
+        0.0,
+        6.0
+      ]
+    },
+    {
+      "leg_kind": "return_home",
+      "position_enu_m": [
+        0.0,
+        0.0,
+        2.0
+      ]
+    }
+  ]
+}

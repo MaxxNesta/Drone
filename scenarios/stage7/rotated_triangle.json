@@ -1,0 +1,45 @@
+{
+  "operation": "survey",
+  "mission_id": "rotated-triangle",
+  "area": [
+    [
+      0,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      7,
+      12
+    ]
+  ],
+  "home": [
+    -3,
+    -3,
+    2
+  ],
+  "flight_boundary": [
+    [
+      -8,
+      -8
+    ],
+    [
+      22,
+      -8
+    ],
+    [
+      22,
+      20
+    ],
+    [
+      -8,
+      20
+    ]
+  ],
+  "altitude_m": 5,
+  "lane_spacing_m": 3,
+  "swath_width_m": 3,
+  "orientation_deg": 35
+}

@@ -1,0 +1,39 @@
+{
+  "operation": "survey",
+  "mission_id": "concave-boundary",
+  "area": [
+    [
+      0,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      0,
+      12
+    ]
+  ],
+  "home": [
+    1,
+    1,
+    2
+  ],
+  "altitude_m": 4,
+  "lane_spacing_m": 3,
+  "swath_width_m": 3,
+  "orientation_deg": 90
+}

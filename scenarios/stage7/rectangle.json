@@ -1,0 +1,53 @@
+{
+  "operation": "survey",
+  "mission_id": "rectangle-survey",
+  "area": [
+    [
+      0,
+      0
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      12
+    ],
+    [
+      0,
+      12
+    ]
+  ],
+  "home": [
+    -5,
+    -5,
+    2
+  ],
+  "flight_boundary": [
+    [
+      -10,
+      -10
+    ],
+    [
+      30,
+      -10
+    ],
+    [
+      30,
+      25
+    ],
+    [
+      -10,
+      25
+    ]
+  ],
+  "altitude_m": 5,
+  "lane_spacing_m": 4,
+  "swath_width_m": 4,
+  "orientation_deg": 90,
+  "metadata": {
+    "purpose": "civilian survey simulation",
+    "footprint": "ideal geometric assumption; not camera calibration"
+  }
+}
