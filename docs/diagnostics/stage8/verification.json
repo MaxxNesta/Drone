@@ -1,0 +1,44 @@
+{
+  "base_commit": "863847940357f4252ce397140c746febecdfd2a5",
+  "unchanged_prior_tracked_files": 76,
+  "runtime": "Python 3.12.14",
+  "preservation_check": "git diff respects repository line-ending normalization",
+  "scenarios": {
+    "crossing": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 701
+    },
+    "fleet-lifecycle": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 901
+    },
+    "independent-surveys": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 5001
+    },
+    "one-battery-failure": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 701
+    },
+    "one-boundary-failure": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 2701
+    },
+    "staggered-crossing": {
+      "exact_fleet_replay": true,
+      "exact_independent_stage6_replay": true,
+      "vehicle_count": 2,
+      "samples_per_vehicle": 1301
+    }
+  }
+}

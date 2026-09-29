@@ -93,3 +93,9 @@ Vehicle telemetry and mission commands form in-process boundaries for a future w
 `planning/geometry.py`, `mission.py` and `routes.py` produce versioned civilian-survey mission data from local ENU polygons. They do not import vehicle physics or perception. Explicit home/start, cruise altitude, speed/acceleration limits, footprint assumptions and route legs are validated before the optional execution adapter creates Stage 6 waypoints. The existing Stage 6 engine remains the sole owner of lifecycle, control, dynamics and clock behavior.
 
 The adapter can preview an existing-engine step and invoke its virtual stop before a polygon-boundary crossing. A nominally valid route is not proof of executable coverage. Standalone virtual return-home planning does not replace a live mission or resume an aborted engine. See [Stage 7 planning, estimates and failures](STAGE7_PLANNING.md).
+
+## Stage 8 fleet orchestration
+
+`drone_sim/fleet/` composes complete Stage 7 missions with independent Stage 6 engines. One coordinator advances and passes an authoritative immutable clock to all members, including paused and failed vehicles. Derived fleet status exposes individual state counts and failures; commands remain in-process and virtual only. Polygon supervision is a thin check around existing engine steps.
+
+Static route overlap and synchronized swept proximity are advisory records only; they cannot modify controls or mission plans. Per-vehicle telemetry and expanded fleet configurations support deterministic replay on a fixed runtime. Planning, physics and perception retain their independent contracts. See [Stage 8 lifecycle, replay and measured results](STAGE8_FLEET.md).

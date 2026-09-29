@@ -1,0 +1,444 @@
+{
+  "actions": [
+    {
+      "command": "start",
+      "tick": 0,
+      "vehicle_id": null
+    }
+  ],
+  "fleet_id": "independent-surveys",
+  "members": [
+    {
+      "mission": {
+        "acceleration_limit_mps2": 2.0,
+        "altitude_m": 4,
+        "coordinate_frame": "ENU",
+        "flight_boundary": [
+          [
+            -40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            40.0
+          ],
+          [
+            -40.0,
+            40.0
+          ]
+        ],
+        "home_enu_m": [
+          3.0,
+          -2.0,
+          2.0
+        ],
+        "lane_spacing_m": 2,
+        "metadata": {},
+        "mission_id": "east-survey",
+        "orientation_deg": 90.0,
+        "position_tolerance_m": 0.1,
+        "schema_version": 1,
+        "settle_s": 0.5,
+        "settling_allowance_s": 2.0,
+        "speed_limit_mps": 3.0,
+        "speed_tolerance_mps": 0.1,
+        "start_enu_m": [
+          3.0,
+          -2.0,
+          2.0
+        ],
+        "survey_area": [
+          [
+            5.0,
+            0.0
+          ],
+          [
+            11.0,
+            0.0
+          ],
+          [
+            11.0,
+            4.0
+          ],
+          [
+            5.0,
+            4.0
+          ]
+        ],
+        "swath_width_m": 2,
+        "waypoints": [
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              3.0,
+              -2.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              5.0,
+              3.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_lane",
+            "position_enu_m": [
+              11.0,
+              3.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              11.0,
+              1.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_lane",
+            "position_enu_m": [
+              5.0,
+              1.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              5.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              11.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              11.0,
+              4.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              5.0,
+              4.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              5.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "return_home",
+            "position_enu_m": [
+              3.0,
+              -2.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "return_home",
+            "position_enu_m": [
+              3.0,
+              -2.0,
+              2.0
+            ]
+          }
+        ]
+      },
+      "vehicle": {
+        "battery": {
+          "acceleration_drain_per_mps": 2e-05,
+          "critical_fraction": 0.1,
+          "idle_drain_per_s": 0.0002,
+          "low_fraction": 0.2,
+          "speed_drain_per_m": 5e-05
+        },
+        "controller": {
+          "kd": 2.2,
+          "kp": 1.2
+        },
+        "drag_per_s": 0.15,
+        "dt_s": 0.02,
+        "geofence": {
+          "maximum_enu_m": [
+            50.0,
+            50.0,
+            30.0
+          ],
+          "minimum_enu_m": [
+            -50.0,
+            -50.0,
+            0.0
+          ]
+        },
+        "initial_state": {
+          "acceleration_enu_mps2": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "battery_fraction": 1.0,
+          "heading_rad": 0.0,
+          "position_enu_m": [
+            3,
+            -2,
+            2
+          ],
+          "velocity_enu_mps": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "limits": {
+          "max_acceleration_mps2": 3.0,
+          "max_heading_rate_radps": 1.5,
+          "max_speed_mps": 5.0
+        }
+      },
+      "vehicle_id": "east"
+    },
+    {
+      "mission": {
+        "acceleration_limit_mps2": 2.0,
+        "altitude_m": 4,
+        "coordinate_frame": "ENU",
+        "flight_boundary": [
+          [
+            -40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            40.0
+          ],
+          [
+            -40.0,
+            40.0
+          ]
+        ],
+        "home_enu_m": [
+          -17.0,
+          -2.0,
+          2.0
+        ],
+        "lane_spacing_m": 2,
+        "metadata": {},
+        "mission_id": "west-survey",
+        "orientation_deg": 90.0,
+        "position_tolerance_m": 0.1,
+        "schema_version": 1,
+        "settle_s": 0.5,
+        "settling_allowance_s": 2.0,
+        "speed_limit_mps": 3.0,
+        "speed_tolerance_mps": 0.1,
+        "start_enu_m": [
+          -17.0,
+          -2.0,
+          2.0
+        ],
+        "survey_area": [
+          [
+            -15.0,
+            0.0
+          ],
+          [
+            -9.0,
+            0.0
+          ],
+          [
+            -9.0,
+            4.0
+          ],
+          [
+            -15.0,
+            4.0
+          ]
+        ],
+        "swath_width_m": 2,
+        "waypoints": [
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              -17.0,
+              -2.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              -15.0,
+              3.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_lane",
+            "position_enu_m": [
+              -9.0,
+              3.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              -9.0,
+              1.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_lane",
+            "position_enu_m": [
+              -15.0,
+              1.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              -15.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              -9.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              -9.0,
+              4.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              -15.0,
+              4.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "survey_boundary",
+            "position_enu_m": [
+              -15.0,
+              0.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "return_home",
+            "position_enu_m": [
+              -17.0,
+              -2.0,
+              4.0
+            ]
+          },
+          {
+            "leg_kind": "return_home",
+            "position_enu_m": [
+              -17.0,
+              -2.0,
+              2.0
+            ]
+          }
+        ]
+      },
+      "vehicle": {
+        "battery": {
+          "acceleration_drain_per_mps": 2e-05,
+          "critical_fraction": 0.1,
+          "idle_drain_per_s": 0.0002,
+          "low_fraction": 0.2,
+          "speed_drain_per_m": 5e-05
+        },
+        "controller": {
+          "kd": 2.2,
+          "kp": 1.2
+        },
+        "drag_per_s": 0.15,
+        "dt_s": 0.02,
+        "geofence": {
+          "maximum_enu_m": [
+            50.0,
+            50.0,
+            30.0
+          ],
+          "minimum_enu_m": [
+            -50.0,
+            -50.0,
+            0.0
+          ]
+        },
+        "initial_state": {
+          "acceleration_enu_mps2": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "battery_fraction": 1.0,
+          "heading_rad": 0.0,
+          "position_enu_m": [
+            -17,
+            -2,
+            2
+          ],
+          "velocity_enu_mps": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "limits": {
+          "max_acceleration_mps2": 3.0,
+          "max_heading_rate_radps": 1.5,
+          "max_speed_mps": 5.0
+        }
+      },
+      "vehicle_id": "west"
+    }
+  ],
+  "proximity_m": 2.0,
+  "route_conflict_m": 2.0,
+  "schema_version": 1,
+  "steps": 5000
+}

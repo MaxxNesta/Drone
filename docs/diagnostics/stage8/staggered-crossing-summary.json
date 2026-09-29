@@ -1,0 +1,113 @@
+{
+  "all_completed": true,
+  "all_terminal": true,
+  "completed_fraction": 1.0,
+  "completed_waypoints": 2,
+  "degraded": false,
+  "duration_s": 26.0,
+  "first_all_completed_time_s": 20.5,
+  "fleet_id": "staggered-crossing",
+  "minimum_alert_separation_m": null,
+  "proximity_episodes": 0,
+  "proximity_pair_samples": 0,
+  "proximity_pairs": [],
+  "route_advisories": [
+    {
+      "advisory_only": true,
+      "kind": "spatial_route_conflict",
+      "leg_indices": [
+        0,
+        0
+      ],
+      "minimum_route_separation_m": 0.0,
+      "threshold_m": 2.0,
+      "vehicle_ids": [
+        "eastbound",
+        "northbound"
+      ]
+    }
+  ],
+  "samples": 1301,
+  "schema_version": 1,
+  "state_counts": {
+    "completed": 2
+  },
+  "status": "completed",
+  "vehicles": {
+    "eastbound": {
+      "battery_final_fraction": 0.9941800000116714,
+      "completed_waypoints": 1,
+      "completion_time_s": 8.5,
+      "duration_s": 26.0,
+      "events": [
+        {
+          "kind": "mission_started",
+          "tick": 0,
+          "time_s": 0.0
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 425,
+          "time_s": 8.5,
+          "waypoint_index": 0
+        },
+        {
+          "kind": "mission_completed",
+          "tick": 425,
+          "time_s": 8.5
+        }
+      ],
+      "final_mission_state": "completed",
+      "final_position_enu_m": [
+        4.999999819922172,
+        0.0,
+        2.0
+      ],
+      "final_waypoint_error_m": 1.800778282046167e-07,
+      "fleet_failure": null,
+      "maximum_acceleration_mps2": 2.0,
+      "maximum_speed_mps": 3.0,
+      "samples": 1301,
+      "schema_version": 1,
+      "stop_reason": null
+    },
+    "northbound": {
+      "battery_final_fraction": 0.994180079231112,
+      "completed_waypoints": 1,
+      "completion_time_s": 20.5,
+      "duration_s": 26.0,
+      "events": [
+        {
+          "kind": "mission_started",
+          "tick": 600,
+          "time_s": 12.0
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 1025,
+          "time_s": 20.5,
+          "waypoint_index": 0
+        },
+        {
+          "kind": "mission_completed",
+          "tick": 1025,
+          "time_s": 20.5
+        }
+      ],
+      "final_mission_state": "completed",
+      "final_position_enu_m": [
+        0.0,
+        4.99877755335395,
+        2.0
+      ],
+      "final_waypoint_error_m": 0.0012224466460502015,
+      "fleet_failure": null,
+      "maximum_acceleration_mps2": 2.0,
+      "maximum_speed_mps": 3.0,
+      "samples": 1301,
+      "schema_version": 1,
+      "stop_reason": null
+    }
+  },
+  "waypoint_count": 2
+}

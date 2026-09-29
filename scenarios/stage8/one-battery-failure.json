@@ -1,0 +1,234 @@
+{
+  "actions": [
+    {
+      "command": "start",
+      "tick": 0,
+      "vehicle_id": null
+    }
+  ],
+  "fleet_id": "one-battery-failure",
+  "members": [
+    {
+      "mission": {
+        "acceleration_limit_mps2": 2,
+        "altitude_m": 2,
+        "coordinate_frame": "ENU",
+        "flight_boundary": [
+          [
+            -40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            40.0
+          ],
+          [
+            -40.0,
+            40.0
+          ]
+        ],
+        "home_enu_m": [
+          -5.0,
+          -10.0,
+          2.0
+        ],
+        "lane_spacing_m": null,
+        "metadata": {},
+        "mission_id": "alpha",
+        "orientation_deg": null,
+        "position_tolerance_m": 0.1,
+        "schema_version": 1,
+        "settle_s": 0.5,
+        "settling_allowance_s": 2.0,
+        "speed_limit_mps": 3,
+        "speed_tolerance_mps": 0.1,
+        "start_enu_m": [
+          -5.0,
+          -10.0,
+          2.0
+        ],
+        "survey_area": null,
+        "swath_width_m": null,
+        "waypoints": [
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              5.0,
+              -10.0,
+              2.0
+            ]
+          }
+        ]
+      },
+      "vehicle": {
+        "battery": {
+          "acceleration_drain_per_mps": 2e-05,
+          "critical_fraction": 0.1,
+          "idle_drain_per_s": 1,
+          "low_fraction": 0.2,
+          "speed_drain_per_m": 5e-05
+        },
+        "controller": {
+          "kd": 2.2,
+          "kp": 1.2
+        },
+        "drag_per_s": 0.15,
+        "dt_s": 0.02,
+        "geofence": {
+          "maximum_enu_m": [
+            50.0,
+            50.0,
+            30.0
+          ],
+          "minimum_enu_m": [
+            -50.0,
+            -50.0,
+            0.0
+          ]
+        },
+        "initial_state": {
+          "acceleration_enu_mps2": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "battery_fraction": 1.0,
+          "heading_rad": 0.0,
+          "position_enu_m": [
+            -5,
+            -10,
+            2
+          ],
+          "velocity_enu_mps": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "limits": {
+          "max_acceleration_mps2": 3.0,
+          "max_heading_rate_radps": 1.5,
+          "max_speed_mps": 5.0
+        }
+      },
+      "vehicle_id": "alpha"
+    },
+    {
+      "mission": {
+        "acceleration_limit_mps2": 2,
+        "altitude_m": 2,
+        "coordinate_frame": "ENU",
+        "flight_boundary": [
+          [
+            -40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            -40.0
+          ],
+          [
+            40.0,
+            40.0
+          ],
+          [
+            -40.0,
+            40.0
+          ]
+        ],
+        "home_enu_m": [
+          -5.0,
+          10.0,
+          2.0
+        ],
+        "lane_spacing_m": null,
+        "metadata": {},
+        "mission_id": "bravo",
+        "orientation_deg": null,
+        "position_tolerance_m": 0.1,
+        "schema_version": 1,
+        "settle_s": 0.5,
+        "settling_allowance_s": 2.0,
+        "speed_limit_mps": 3,
+        "speed_tolerance_mps": 0.1,
+        "start_enu_m": [
+          -5.0,
+          10.0,
+          2.0
+        ],
+        "survey_area": null,
+        "swath_width_m": null,
+        "waypoints": [
+          {
+            "leg_kind": "transit",
+            "position_enu_m": [
+              5.0,
+              10.0,
+              2.0
+            ]
+          }
+        ]
+      },
+      "vehicle": {
+        "battery": {
+          "acceleration_drain_per_mps": 2e-05,
+          "critical_fraction": 0.1,
+          "idle_drain_per_s": 0.0002,
+          "low_fraction": 0.2,
+          "speed_drain_per_m": 5e-05
+        },
+        "controller": {
+          "kd": 2.2,
+          "kp": 1.2
+        },
+        "drag_per_s": 0.15,
+        "dt_s": 0.02,
+        "geofence": {
+          "maximum_enu_m": [
+            50.0,
+            50.0,
+            30.0
+          ],
+          "minimum_enu_m": [
+            -50.0,
+            -50.0,
+            0.0
+          ]
+        },
+        "initial_state": {
+          "acceleration_enu_mps2": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "battery_fraction": 1.0,
+          "heading_rad": 0.0,
+          "position_enu_m": [
+            -5,
+            10,
+            2
+          ],
+          "velocity_enu_mps": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "limits": {
+          "max_acceleration_mps2": 3.0,
+          "max_heading_rate_radps": 1.5,
+          "max_speed_mps": 5.0
+        }
+      },
+      "vehicle_id": "bravo"
+    }
+  ],
+  "proximity_m": 2.0,
+  "route_conflict_m": 2.0,
+  "schema_version": 1,
+  "steps": 700
+}
