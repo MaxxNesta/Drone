@@ -1,0 +1,147 @@
+{
+  "all_completed": false,
+  "all_terminal": true,
+  "completed_fraction": 0.5,
+  "completed_waypoints": 9,
+  "degraded": true,
+  "duration_s": 54.0,
+  "first_all_completed_time_s": null,
+  "fleet_id": "one-boundary-failure",
+  "minimum_alert_separation_m": null,
+  "proximity_episodes": 0,
+  "proximity_pair_samples": 0,
+  "proximity_pairs": [],
+  "route_advisories": [],
+  "samples": 2701,
+  "schema_version": 1,
+  "state_counts": {
+    "aborted": 1,
+    "completed": 1
+  },
+  "status": "finished_with_failures",
+  "vehicles": {
+    "alpha": {
+      "battery_final_fraction": 0.988579999999998,
+      "completed_waypoints": 1,
+      "completion_time_s": 8.5,
+      "duration_s": 54.0,
+      "events": [
+        {
+          "kind": "mission_started",
+          "tick": 0,
+          "time_s": 0.0
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 425,
+          "time_s": 8.5,
+          "waypoint_index": 0
+        },
+        {
+          "kind": "mission_completed",
+          "tick": 425,
+          "time_s": 8.5
+        }
+      ],
+      "final_mission_state": "completed",
+      "final_position_enu_m": [
+        4.999999999999976,
+        -10.0,
+        2.0
+      ],
+      "final_waypoint_error_m": 2.398081733190338e-14,
+      "fleet_failure": null,
+      "maximum_acceleration_mps2": 2.0,
+      "maximum_speed_mps": 3.0,
+      "samples": 2701,
+      "schema_version": 1,
+      "stop_reason": null
+    },
+    "concave": {
+      "battery_final_fraction": 0.9883867006749403,
+      "completed_waypoints": 8,
+      "completion_time_s": null,
+      "duration_s": 54.0,
+      "events": [
+        {
+          "kind": "mission_started",
+          "tick": 0,
+          "time_s": 0.0
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 267,
+          "time_s": 5.34,
+          "waypoint_index": 0
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 684,
+          "time_s": 13.68,
+          "waypoint_index": 1
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 1008,
+          "time_s": 20.16,
+          "waypoint_index": 2
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 1307,
+          "time_s": 26.14,
+          "waypoint_index": 3
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 1631,
+          "time_s": 32.62,
+          "waypoint_index": 4
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 1930,
+          "time_s": 38.6,
+          "waypoint_index": 5
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 2254,
+          "time_s": 45.08,
+          "waypoint_index": 6
+        },
+        {
+          "kind": "waypoint_reached",
+          "tick": 2425,
+          "time_s": 48.5,
+          "waypoint_index": 7
+        },
+        {
+          "kind": "virtual_stop",
+          "reason": "emergency_stop",
+          "tick": 2428,
+          "time_s": 48.56,
+          "velocity_reset_enu_mps": [
+            -0.11842087304611887,
+            0.08589258981450165,
+            1.2158495457005593e-14
+          ]
+        }
+      ],
+      "final_mission_state": "aborted",
+      "final_position_enu_m": [
+        3.999193826295472,
+        4.065995509323736,
+        4.000000000000024
+      ],
+      "final_waypoint_error_m": 8.402215920997156,
+      "fleet_failure": "predicted_flight_boundary_crossing",
+      "maximum_acceleration_mps2": 2.0,
+      "maximum_speed_mps": 3.0000000000000004,
+      "samples": 2701,
+      "schema_version": 1,
+      "stop_reason": "emergency_stop"
+    }
+  },
+  "waypoint_count": 20
+}
