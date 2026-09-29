@@ -99,3 +99,9 @@ The adapter can preview an existing-engine step and invoke its virtual stop befo
 `drone_sim/fleet/` composes complete Stage 7 missions with independent Stage 6 engines. One coordinator advances and passes an authoritative immutable clock to all members, including paused and failed vehicles. Derived fleet status exposes individual state counts and failures; commands remain in-process and virtual only. Polygon supervision is a thin check around existing engine steps.
 
 Static route overlap and synchronized swept proximity are advisory records only; they cannot modify controls or mission plans. Per-vehicle telemetry and expanded fleet configurations support deterministic replay on a fixed runtime. Planning, physics and perception retain their independent contracts. See [Stage 8 lifecycle, replay and measured results](STAGE8_FLEET.md).
+
+## Stage 9 local mission-control transport
+
+`mission_control/` is an optional FastAPI/WebSocket package outside the unchanged simulation packages. A single owner serializes configuration, authorized tick-boundary commands and playback pacing around the existing fleet coordinator; only the fleet advances simulation time. Versioned envelopes separate exact simulation truth, absent tracking estimates and advisory warnings. Bounded viewer queues favor current snapshots while full recordings retain deterministic replay inputs/results.
+
+The provided server is authenticated and loopback-only with one worker; clients cannot set physics or vehicle state. Playback pause differs from the existing virtual mission pause. See [Stage 9 API, authorization, results and limitations](STAGE9_BACKEND.md).
