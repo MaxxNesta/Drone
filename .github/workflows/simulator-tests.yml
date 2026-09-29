@@ -15,3 +15,14 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -v
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-backend-lock.txt
+      - run: python -m unittest discover -v
+      - run: python -m mission_control.smoke --report /tmp/stage9-loopback.json

@@ -1,0 +1,23 @@
+{
+  "base_commit": "70c2d08e2f364ee4869253a7e044052ea02456fb",
+  "unchanged_prior_tracked_files": 82,
+  "preservation_check": "git diff with repository line-ending normalization",
+  "tests": {
+    "core_python_3_9": {
+      "run": 226,
+      "passed": 212,
+      "skipped": 14
+    },
+    "backend_python_3_12": {
+      "run": 226,
+      "passed": 222,
+      "skipped": 4
+    },
+    "vision_python_3_12": {
+      "run": 226,
+      "passed": 216,
+      "skipped": 10
+    }
+  },
+  "all_test_cases_executed_across_environments": true
+}

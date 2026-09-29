@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stages 1–7 are merged. Stage 8 multi-vehicle simulation is implemented for review; see [Stage 8 results](STAGE8_FLEET.md). Real-video accuracy/identity validation still requires independent manual labels.
+Status: Stages 1–8 are merged. Stage 9 local mission-control backend is implemented for review; see [Stage 9 results](STAGE9_BACKEND.md). Real-video accuracy/identity validation still requires independent manual labels.
 
 ## First algorithm to implement
 
@@ -26,6 +26,7 @@ This is the smallest useful first algorithm because it supplies independent, geo
 | 6: independent virtual vehicle | Fixed-step ENU point-mass dynamics, bounded PD control, waypoint mission states, battery/geofence monitoring, explicit virtual stops and structured telemetry/plots. | Convergence, norm limits, deterministic replay, waypoint completion, pause/resume and safety tests; vehicle truth remains separate from perception; no physical aircraft or website integration. |
 | 7: advanced mission planning | Independent ENU mission/polygon definitions, lawnmower/perimeter coverage, capability validation, approximate duration and virtual return-home plans. | Reproducible geometry/coverage tests, unchanged Stage 6 execution, explicit route rejection and duration comparison, structured JSON and route plots; no live hardware or website. |
 | 8: multi-vehicle simulation | Independent vehicle missions and batteries on one authoritative clock; fleet/targeted controls; advisory route/proximity diagnostics and separate telemetry. | Independent execution, failure isolation, shared ticks, deterministic fleet and standalone replay, reproducible survey/crossing/lifecycle fixtures; no automatic avoidance or hardware. |
+| 9: local mission-control backend | Optional authenticated FastAPI/WebSocket transport, bounded telemetry, authorized virtual commands, pacing, recordings and replay. | Shared-clock invariance, concurrent viewers, reconnect/resync, command ordering, failure isolation, actual loopback smoke test and complete regression suite; no website or physical integration. |
 
 ## Fix order for future working copies
 
@@ -48,4 +49,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 8 composes the unchanged planner and vehicle engine into a software-only fleet. Independent surveys complete; crossing diagnostics remain advisory, and individual battery or polygon failures do not stop peers. Six reproducible fixtures and 198 tests document behavior and limits. The new PR targets `dev` without automatic merge. Automatic avoidance needs a separately defined and tested design; physical integration, websites, terrain and live mission replacement remain outside scope.
+Stage 9 exposes the unchanged software-only fleet through an authenticated loopback service. Full telemetry recordings remain separate from bounded browser delivery; pacing does not alter dt, and commands are applied in recorded tick order. All 226 tests execute successfully across core/backend/vision environments, with a real Uvicorn HTTP/WebSocket smoke run and exact replay. The new PR targets `dev` without automatic merge. Production hosting, physical integration, automatic avoidance, websites and terrain remain outside scope.

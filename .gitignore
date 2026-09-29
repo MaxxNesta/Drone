@@ -10,3 +10,5 @@ __pycache__/
 
 /artifacts/stage7/
 /artifacts/stage8/
+/.venv-backend/
+/artifacts/stage9/
