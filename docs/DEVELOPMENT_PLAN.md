@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stages 1–8 are merged. Stage 9 local mission-control backend is implemented for review; see [Stage 9 results](STAGE9_BACKEND.md). Real-video accuracy/identity validation still requires independent manual labels.
+Status: Stages 1–9 are merged. Stage 10 local mission-control dashboard is implemented for review; see [Stage 10 results](STAGE10_DASHBOARD.md). Real-video accuracy/identity validation still requires independent manual labels.
 
 ## First algorithm to implement
 
@@ -27,6 +27,7 @@ This is the smallest useful first algorithm because it supplies independent, geo
 | 7: advanced mission planning | Independent ENU mission/polygon definitions, lawnmower/perimeter coverage, capability validation, approximate duration and virtual return-home plans. | Reproducible geometry/coverage tests, unchanged Stage 6 execution, explicit route rejection and duration comparison, structured JSON and route plots; no live hardware or website. |
 | 8: multi-vehicle simulation | Independent vehicle missions and batteries on one authoritative clock; fleet/targeted controls; advisory route/proximity diagnostics and separate telemetry. | Independent execution, failure isolation, shared ticks, deterministic fleet and standalone replay, reproducible survey/crossing/lifecycle fixtures; no automatic avoidance or hardware. |
 | 9: local mission-control backend | Optional authenticated FastAPI/WebSocket transport, bounded telemetry, authorized virtual commands, pacing, recordings and replay. | Shared-clock invariance, concurrent viewers, reconnect/resync, command ordering, failure isolation, actual loopback smoke test and complete regression suite; no website or physical integration. |
+| 10: local mission-control dashboard | Separate Next.js/TypeScript interface, protected server-side bridge, ENU map, telemetry, commands, results and replay. | Browser reconnect/resync, validation/load, authoritative telemetry, acknowledged versus applied commands, error states, replay and complete regression checks; no terrain or physical integration. |
 
 ## Fix order for future working copies
 
@@ -49,4 +50,4 @@ These do not block the proposed point-target observation simulator. They do bloc
 
 ## Current stopping point
 
-Stage 9 exposes the unchanged software-only fleet through an authenticated loopback service. Full telemetry recordings remain separate from bounded browser delivery; pacing does not alter dt, and commands are applied in recorded tick order. All 226 tests execute successfully across core/backend/vision environments, with a real Uvicorn HTTP/WebSocket smoke run and exact replay. The new PR targets `dev` without automatic merge. Production hosting, physical integration, automatic avoidance, websites and terrain remain outside scope.
+Stage 10 presents the unchanged Python fleet through a loopback Next.js dashboard. The server-side bridge retains backend credentials; the browser renders local ENU telemetry and uses existing authorized commands and replay APIs. The supplied palette and reference inform the presentation without terrain or invented geographic coordinates. The new PR targets `dev` without automatic merge. Production hosting, physical integration and automatic avoidance remain outside scope. See [Stage 10 setup, validation and limitations](STAGE10_DASHBOARD.md).
