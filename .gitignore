@@ -12,3 +12,11 @@ __pycache__/
 /artifacts/stage8/
 /.venv-backend/
 /artifacts/stage9/
+/dashboard/node_modules/
+/dashboard/.next/
+/dashboard/next-env.d.ts
+/dashboard/tsconfig.tsbuildinfo
+/dashboard/test-results/
+/dashboard/playwright-report/
+/dashboard/.env*
+/artifacts/stage10/

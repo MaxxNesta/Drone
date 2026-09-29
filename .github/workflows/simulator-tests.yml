@@ -26,3 +26,34 @@ jobs:
       - run: python -m pip install -r requirements-backend-lock.txt
       - run: python -m unittest discover -v
       - run: python -m mission_control.smoke --report /tmp/stage9-loopback.json
+
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+      - run: python -m pip install -r requirements-backend-lock.txt
+      - run: npm ci
+        working-directory: dashboard
+      - run: npm run format:check && npm run build && npm run typecheck && npm test
+        working-directory: dashboard
+      - run: npx playwright install --with-deps chromium
+        working-directory: dashboard
+      - run: npm run test:e2e
+        working-directory: dashboard
+        env:
+          BACKEND_PYTHON: python
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: dashboard-browser-report
+          path: |
+            dashboard/playwright-report/
+            dashboard/test-results/

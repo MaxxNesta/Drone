@@ -105,3 +105,9 @@ Static route overlap and synchronized swept proximity are advisory records only;
 `mission_control/` is an optional FastAPI/WebSocket package outside the unchanged simulation packages. A single owner serializes configuration, authorized tick-boundary commands and playback pacing around the existing fleet coordinator; only the fleet advances simulation time. Versioned envelopes separate exact simulation truth, absent tracking estimates and advisory warnings. Bounded viewer queues favor current snapshots while full recordings retain deterministic replay inputs/results.
 
 The provided server is authenticated and loopback-only with one worker; clients cannot set physics or vehicle state. Playback pause differs from the existing virtual mission pause. See [Stage 9 API, authorization, results and limitations](STAGE9_BACKEND.md).
+
+## Stage 10 local presentation boundary
+
+`dashboard/` contains a separate Next.js/TypeScript client and loopback Node bridge. The browser renders the Stage 9 versioned truth/advisory envelope, tracks bounded sequence-aware display history and submits authorized REST requests through a local session. Backend control/view credentials never enter browser bundles. The unchanged Python service, fleet coordinator, vehicle engines and shared clock remain authoritative.
+
+The initial map is an SVG projection of local east/north meters with up displayed separately. It consumes normalized existing mission geometry, not generated routes or invented latitude/longitude. Geographic integration would require an explicit surveyed origin and a separate projection adapter. No terrain or Gazebo contract exists. See [Stage 10 authentication, UI behavior and validation](STAGE10_DASHBOARD.md).
