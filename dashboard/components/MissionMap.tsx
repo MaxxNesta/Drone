@@ -91,7 +91,7 @@ export default function MissionMap({
       <svg
         className="mission-canvas"
         viewBox="0 0 880 620"
-        role="img"
+        role="group"
         aria-label="Local ENU mission map in meters"
       >
         <defs>

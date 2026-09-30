@@ -22,6 +22,8 @@ export async function api<T>(
     cache: "no-store",
   });
   const data = await response.json();
+  if (response.status === 401)
+    window.dispatchEvent(new Event("skyview:session-expired"));
   if (!response.ok)
     throw new Error(
       typeof data.detail === "string"

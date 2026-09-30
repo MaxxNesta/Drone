@@ -20,3 +20,6 @@ __pycache__/
 /dashboard/playwright-report/
 /dashboard/.env*
 /artifacts/stage10/
+/.skyview.env
+/artifacts/skyview/
+/artifacts/stage11/

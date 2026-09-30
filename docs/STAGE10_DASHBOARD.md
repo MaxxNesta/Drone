@@ -1,5 +1,7 @@
 # Stage 10 — local mission-control dashboard
 
+> Historical Stage 10 snapshot. Stage 11 replaces the transient geometry cache with an authenticated backend read and adds the local launcher; use [Stage 11 setup](STAGE11_INTEGRATION.md) for the release candidate.
+
 PR #9 was reviewed, its successful CI checked, and merged into `dev` at `e63fc2d` before creating `stage10-mission-dashboard`. Stage 10 adds a separate Next.js/TypeScript/Tailwind application in `dashboard/`. The original tracker, all `drone_sim/` packages and the Stage 9 `mission_control/` implementation remain unchanged.
 
 ## Implemented interface

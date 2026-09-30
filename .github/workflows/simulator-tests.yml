@@ -26,6 +26,7 @@ jobs:
       - run: python -m pip install -r requirements-backend-lock.txt
       - run: python -m unittest discover -v
       - run: python -m mission_control.smoke --report /tmp/stage9-loopback.json
+      - run: python -m mission_control.release_check --report /tmp/stage11-transport.json
 
   dashboard:
     runs-on: ubuntu-latest
@@ -44,6 +45,7 @@ jobs:
         working-directory: dashboard
       - run: npm run format:check && npm run build && npm run typecheck && npm test
         working-directory: dashboard
+      - run: python -m scripts.check_startup --report /tmp/stage11-startup.json
       - run: npx playwright install --with-deps chromium
         working-directory: dashboard
       - run: npm run test:e2e
