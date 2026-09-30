@@ -198,8 +198,9 @@ export function receive(state: StreamState, next: Envelope): StreamState {
 export const colors = ["#F36B39", "#4EADE1", "#52D596", "#DFC57C"];
 export const speed = (v: Vehicle) => Math.hypot(...v.vehicle.velocity_enu_mps);
 export const timestamp = (seconds: number) => {
-  const whole = Math.floor(seconds);
-  return `${String(Math.floor(whole / 60)).padStart(2, "0")}:${String(whole % 60).padStart(2, "0")}.${String(Math.floor((seconds % 1) * 100)).padStart(2, "0")}`;
+  const hundredths = Math.round(seconds * 100);
+  const whole = Math.floor(hundredths / 100);
+  return `${String(Math.floor(whole / 60)).padStart(2, "0")}:${String(whole % 60).padStart(2, "0")}.${String(hundredths % 100).padStart(2, "0")}`;
 };
 export function fitBounds(config: FleetConfig | null, vehicles: Vehicle[]) {
   const points: number[][] = vehicles.map((v) => v.vehicle.position_enu_m);

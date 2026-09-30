@@ -69,6 +69,24 @@ class Service:
                 'dt_s': self.engine.clock.dt_s if self.engine else None,
                 'viewers': len(self.viewers), 'recorded': self.recorded, 'error': self.error}
 
+    async def read_status(self):
+        async with self.lock:
+            return self.status()
+
+    async def snapshot(self):
+        # Final recording is asynchronous: wait for the complete tick publication.
+        async with self.lock:
+            if self.latest is None:
+                return None
+            return json.loads(encoded(dict(self.latest,delivery='snapshot',status=self.status())))
+
+    async def active_configuration(self):
+        """Atomic, detached read of the currently loaded run; never advances time."""
+        async with self.lock:
+            return {'schema_version': 1, 'epoch': self.epoch, 'run_id': self.run_id,
+                    'state': self.state,
+                    'config': json.loads(encoded(self.config.to_dict())) if self.engine else None}
+
     def _publish(self, row):
         self.sequence += 1
         truth = {k: v for k, v in row.items() if k != 'proximity'}

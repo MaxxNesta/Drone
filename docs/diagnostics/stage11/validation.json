@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "release_candidate": "0.1.0-rc.1",
+  "date": "2026-09-30",
+  "base_commit": "c292efc7c74fcd1ea01a52b5c2bbcb422ef0904c",
+  "runtimes": {
+    "core_python": "3.9.6",
+    "backend_python": "3.12.14",
+    "vision_python": "3.12.14",
+    "node": "24.15.0"
+  },
+  "python": {
+    "core": {
+      "discovered": 231,
+      "passed": 216,
+      "skipped": 15,
+      "failed": 0
+    },
+    "backend": {
+      "discovered": 231,
+      "passed": 227,
+      "skipped": 4,
+      "failed": 0
+    },
+    "vision": {
+      "discovered": 231,
+      "passed": 220,
+      "skipped": 11,
+      "failed": 0
+    }
+  },
+  "dashboard": {
+    "unit_tests_passed": 13,
+    "production_build": "passed",
+    "typecheck": "passed",
+    "format": "passed",
+    "browser_tests_passed": 6,
+    "browser_wall_duration_s": 50.8,
+    "axe_violations": 0,
+    "axe_scope": "Selected-vehicle dashboard; WCAG 2 A/AA and 2.1 A/AA tags in Chromium",
+    "responsive_widths_px": [
+      1440,
+      768,
+      390
+    ],
+    "actual_bridge_restart_recovered": true
+  },
+  "preservation": {
+    "files": 82,
+    "paths": [
+      "existing-tracker/",
+      "drone_sim/"
+    ],
+    "unchanged": true
+  },
+  "warnings": [
+    "Existing Starlette TestClient httpx deprecation",
+    "Existing macOS AVFFrameReceiver/AVFAudioReceiver duplicates in optional video test environment"
+  ]
+}

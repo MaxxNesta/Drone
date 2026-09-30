@@ -154,12 +154,17 @@ def create_app(control_token, view_token, record_dir, origins=('http://127.0.0.1
         return await service.load(await configuration(request))
 
     @app.get('/v1/status',dependencies=[Depends(viewer)])
-    async def status(): return service.status()
+    async def status(): return await service.read_status()
+
+    @app.get('/v1/configurations/active',dependencies=[Depends(viewer)])
+    async def active_configuration():
+        return await service.active_configuration()
 
     @app.get('/v1/snapshot',dependencies=[Depends(viewer)])
     async def snapshot():
-        if service.latest is None: raise HTTPException(409,'No simulation loaded')
-        return dict(service.latest,delivery='snapshot',status=service.status())
+        value=await service.snapshot()
+        if value is None: raise HTTPException(409,'No simulation loaded')
+        return value
 
     @app.post('/v1/playback',dependencies=[Depends(controller)])
     async def playback(body: Playback):
@@ -239,7 +244,7 @@ def create_app(control_token, view_token, record_dir, origins=('http://127.0.0.1
                     try:
                         message=await asyncio.wait_for(queue.get(),timeout=10)
                     except asyncio.TimeoutError:
-                        message={'schema_version':1,'type':'heartbeat',**service.status()}
+                        message={'schema_version':1,'type':'heartbeat',**(await service.read_status())}
                     if vehicle_id is not None and message['type']=='telemetry':
                         truth=message['simulation_truth']
                         if vehicle_id not in truth['vehicles']:

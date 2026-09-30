@@ -111,3 +111,9 @@ The provided server is authenticated and loopback-only with one worker; clients 
 `dashboard/` contains a separate Next.js/TypeScript client and loopback Node bridge. The browser renders the Stage 9 versioned truth/advisory envelope, tracks bounded sequence-aware display history and submits authorized REST requests through a local session. Backend control/view credentials never enter browser bundles. The unchanged Python service, fleet coordinator, vehicle engines and shared clock remain authoritative.
 
 The initial map is an SVG projection of local east/north meters with up displayed separately. It consumes normalized existing mission geometry, not generated routes or invented latitude/longitude. Geographic integration would require an explicit surveyed origin and a separate projection adapter. No terrain or Gazebo contract exists. See [Stage 10 authentication, UI behavior and validation](STAGE10_DASHBOARD.md).
+
+## Stage 11 coherent reads and release orchestration
+
+The existing backend now exposes view-authenticated `GET /v1/configurations/active`, returning a detached normalized config and matching run/epoch under its service lock. The dashboard's session-protected `/api/plan` proxies this read; its old transient plan cache is removed. Status, snapshot and heartbeat reads share the publication lock so final asynchronous recording cannot expose a finished status with prior-tick truth. The authoritative clock and simulation algorithms are unchanged.
+
+`scripts/skyview.py` owns only local process startup, credential configuration and shutdown. `mission_control.release_check` compares real transport/recording output against independent execution of the original simulator. See [Stage 11 release evidence and limitations](STAGE11_INTEGRATION.md).

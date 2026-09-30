@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
+  timestamp,
   decode,
   emptyStream,
   receive,
@@ -123,4 +124,10 @@ test("valid vehicle IDs cannot collide with object prototype keys", () => {
   };
   const state = receive(emptyStream, f);
   assert.equal(state.trails.constructor.length, 1);
+});
+
+test("displayed clock rounds floating point ticks consistently", () => {
+  assert.equal(timestamp(0.58), "00:00.58");
+  assert.equal(timestamp(2.44), "00:02.44");
+  assert.equal(timestamp(59.999), "01:00.00");
 });

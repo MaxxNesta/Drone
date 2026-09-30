@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   AirplaneTilt,
@@ -38,11 +38,21 @@ function Modal({
   description: string;
   children: React.ReactNode;
 }) {
+  const opener = useRef<HTMLElement | null>(null);
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="dialog-overlay" />
-        <Dialog.Content className="dialog-content">
+        <Dialog.Content
+          className="dialog-content"
+          onOpenAutoFocus={() => {
+            opener.current = document.activeElement as HTMLElement;
+          }}
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            opener.current?.focus();
+          }}
+        >
           <div className="dialog-header">
             <div>
               <Dialog.Title>{title}</Dialog.Title>
@@ -89,9 +99,15 @@ export default function Dashboard() {
     [recordError, setRecordError] = useState(""),
     [verified, setVerified] = useState(false);
   useEffect(() => {
+    const expired = () => {
+      setUnlocked(false);
+      setKey("");
+    };
+    window.addEventListener("skyview:session-expired", expired);
     void api("session")
       .then(() => setUnlocked(true))
       .catch(() => setUnlocked(false));
+    return () => window.removeEventListener("skyview:session-expired", expired);
   }, []);
   const envelope =
     stream.envelope?.run_id === status?.run_id ? stream.envelope : null;
@@ -805,8 +821,8 @@ export default function Dashboard() {
       )}
       {!config && vehicles.length > 0 && (
         <p className="plan-notice">
-          Plan geometry unavailable for this externally loaded run. Live vehicle
-          positions remain authoritative.
+          Plan geometry is unavailable. Reconnect to retry loading it. Live
+          vehicle positions remain authoritative.
         </p>
       )}
       <footer className="app-footer">

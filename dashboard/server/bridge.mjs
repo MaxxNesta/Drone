@@ -77,7 +77,6 @@ export function createBridge({
     );
   backend = url.origin;
   const sessions = new Map(),
-    plans = new Map(),
     attempts = new Map();
   const sockets = new WebSocketServer({ noServer: true, maxPayload: 1024 });
   function session(req) {
@@ -217,11 +216,8 @@ export function createBridge({
         return true;
       }
       if (path === "/api/plan" && req.method === "GET") {
-        const status = await upstream("/v1/status");
-        send(res, status.status, {
-          run_id: status.value.run_id,
-          config: plans.get(status.value.run_id) || null,
-        });
+        const result = await upstream("/v1/configurations/active");
+        send(res, result.status, result.value);
         return true;
       }
       const route = allowedRoute(path, req.method);
@@ -230,32 +226,7 @@ export function createBridge({
         return true;
       }
       const data = req.method === "POST" ? await body(req) : undefined;
-      let plan;
-      if (path === "/api/runs") {
-        const validation = await upstream(
-          "/v1/configurations/validate",
-          "POST",
-          data,
-        );
-        if (validation.status !== 200) {
-          send(res, validation.status, validation.value);
-          return true;
-        }
-        plan = validation.value.normalized_config;
-      }
-      if (path.endsWith("/replay")) {
-        const source = await upstream(route.replace(/\/replay$/, ""));
-        if (source.status !== 200) {
-          send(res, source.status, source.value);
-          return true;
-        }
-        plan = source.value.config;
-      }
       const result = await upstream(route, req.method, data);
-      if (plan && result.status === 200) {
-        plans.set(result.value.run_id, plan);
-        if (plans.size > 4) plans.delete(plans.keys().next().value);
-      }
       send(res, result.status, result.value);
       return true;
     } catch (error) {

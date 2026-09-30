@@ -1552,3 +1552,29 @@ small {
   font-size: 11px;
   width: 100%;
 }
+
+/* Preserve native keyboard file input and fleet controls in narrow layouts. */
+.upload {
+  position: relative;
+}
+.upload input {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.upload:focus-within {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+@media (max-width: 580px) {
+  .fleet-footer {
+    display: block;
+  }
+}
+.vehicle-controls {
+  align-self: start;
+}
