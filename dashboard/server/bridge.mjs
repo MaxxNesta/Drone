@@ -11,6 +11,7 @@ export function equal(a, b) {
 export function allowedRoute(path, method) {
   const fixed = {
     "/api/status": ["GET", "/v1/status"],
+    "/api/sitl": ["GET", "/v1/sitl"],
     "/api/snapshot": ["GET", "/v1/snapshot"],
     "/api/validate": ["POST", "/v1/configurations/validate"],
     "/api/runs": ["POST", "/v1/runs"],

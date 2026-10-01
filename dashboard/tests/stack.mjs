@@ -12,6 +12,7 @@ const env = {
   DRONE_VIEW_TOKEN: "test-only-backend-view-secret-not-for-browser-0000000",
   DASHBOARD_ACCESS_KEY: "test-only-dashboard-access-key-000000000000",
   DASHBOARD_PORT: "13000",
+  SKYVIEW_SITL_SNAPSHOT: path.join(records, "sitl-snapshot.json"),
   DRONE_BACKEND_URL: "http://127.0.0.1:18000",
 };
 const children = [];
@@ -62,7 +63,7 @@ let dashboard = start(
 await mkdir(path.join(root, "dashboard/test-results"), { recursive: true });
 await writeFile(
   path.join(root, "dashboard/.next/stage11-test-owner.json"),
-  JSON.stringify({ pid: process.pid }),
+  JSON.stringify({ pid: process.pid, sitlFixture: env.SKYVIEW_SITL_SNAPSHOT }),
 );
 // Test-process IPC only; no production restart endpoint is exposed.
 process.on("SIGUSR2", () => {

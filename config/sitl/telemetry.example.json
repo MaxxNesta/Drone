@@ -1,0 +1,12 @@
+{
+  "vehicle_id": "uav-1",
+  "world": "default",
+  "model": "x500_0",
+  "system_id": 1,
+  "component_id": 1,
+  "udp_port": 14550,
+  "px4_boot_to_simulation_s": 0.0,
+  "world_to_enu_yaw_rad": 0.0,
+  "world_origin_enu_m": [0.0, 0.0, 0.0],
+  "px4_origin_enu_m": [0.0, 0.0, 0.0]
+}

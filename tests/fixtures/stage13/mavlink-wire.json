@@ -1,0 +1,7 @@
+{
+  "evidence": "synthetic_fixture",
+  "captured_from_sitl": false,
+  "generator": "pymavlink 2.4.49 common dialect",
+  "v2_hex": "fd1c0000000101200000e8030000000000400000803f000040c00000a040000080400000c0c07b1a",
+  "v1_hex": "fe1c00010120e8030000000000400000803f000040c00000a040000080400000c0c0e921"
+}

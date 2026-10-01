@@ -1,0 +1,11 @@
+{
+  "evidence": "synthetic_fixture",
+  "captured_from_sitl": false,
+  "description": "Hand-authored protocol-shaped values for conversion tests; no physical or SITL performance evidence.",
+  "clock": {"sim": {"sec": 1, "nsec": 0}},
+  "pose": {"stamp": {"sec": 1, "nsec": 0}, "poses": [{"name": "x500_0", "id": 7, "position": [1, 2, 3], "orientation_wxyz": [1, 0, 0, 0]}]},
+  "heartbeat": {"autopilot": 12, "type": 2, "base_mode": 0},
+  "position": {"time_boot_ms": 1000, "x": 2, "y": 1, "z": -3, "vx": 5, "vy": 4, "vz": -6},
+  "attitude": {"time_boot_ms": 1000, "yaw": 0.4},
+  "estimator": {"time_usec": 1000000, "flags": 47}
+}

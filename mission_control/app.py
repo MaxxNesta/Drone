@@ -72,7 +72,7 @@ class Command(BaseModel):
 
 
 def create_app(control_token, view_token, record_dir, origins=('http://127.0.0.1:8000','http://localhost:8000'),
-               start_runner=True, queue_size=8, history_size=64):
+               start_runner=True, queue_size=8, history_size=64, sitl_snapshot_path=None):
     if any(not isinstance(t,str) or len(t)<32 for t in (control_token,view_token)) or control_token == view_token:
         raise ValueError('Distinct control/view tokens of at least 32 characters required')
     for origin in origins:
@@ -152,6 +152,11 @@ def create_app(control_token, view_token, record_dir, origins=('http://127.0.0.1
     @app.post('/v1/runs',dependencies=[Depends(controller)])
     async def load(request: Request):
         return await service.load(await configuration(request))
+
+    @app.get('/v1/sitl',dependencies=[Depends(viewer)])
+    async def sitl_snapshot():
+        from .sitl import read_sitl
+        return await asyncio.to_thread(read_sitl, sitl_snapshot_path)
 
     @app.get('/v1/status',dependencies=[Depends(viewer)])
     async def status(): return await service.read_status()

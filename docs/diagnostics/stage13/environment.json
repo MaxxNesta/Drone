@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "host": {
+    "os": "Darwin",
+    "architecture": "arm64",
+    "distribution_id": null,
+    "version_id": null
+  },
+  "executables": {
+    "gz": null,
+    "cmake": null,
+    "ninja": null,
+    "git": "/usr/bin/git",
+    "docker": null,
+    "colima": null,
+    "podman": null
+  },
+  "px4_revision": null,
+  "gazebo_version": null,
+  "blockers": [
+    "Host differs from selected Ubuntu 22.04 amd64 baseline; use a separately qualified environment",
+    "Gazebo executable missing",
+    "No PX4 checkout supplied"
+  ],
+  "sitl_executed": false,
+  "note": "Preflight only; presence of tools does not establish successful integration."
+}

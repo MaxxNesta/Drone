@@ -9,6 +9,8 @@ const key = "fixture-dashboard-access-key-0000000000",
   view = "fixture-backend-view-token-000000000000";
 test("only explicit API paths and methods are proxied", () => {
   assert.equal(allowedRoute("/api/status", "GET"), "/v1/status");
+  assert.equal(allowedRoute("/api/sitl", "GET"), "/v1/sitl");
+  assert.equal(allowedRoute("/api/sitl", "POST"), null);
   for (const [path, method] of [
     ["/api/status", "POST"],
     ["/api/commands", "DELETE"],

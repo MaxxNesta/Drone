@@ -22,6 +22,7 @@ import {
   X,
 } from "@phosphor-icons/react";
 import MissionMap from "./MissionMap";
+import SitlPanel from "./SitlPanel";
 import { api, useMission } from "@/lib/useMission";
 import { colors, FleetConfig, speed, Status, timestamp } from "@/lib/model";
 
@@ -346,6 +347,7 @@ export default function Dashboard() {
           </button>
         </div>
       </div>
+      <SitlPanel />
       {(error || status?.error) && (
         <div className="error-banner" role="alert">
           <Warning />
