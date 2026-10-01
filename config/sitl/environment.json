@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "purpose": "single-vehicle software-in-the-loop development only",
+  "os": "Ubuntu 22.04 LTS amd64",
+  "px4_repository": "https://github.com/PX4/PX4-Autopilot.git",
+  "px4_tag": "v1.16.0",
+  "px4_commit": "6ea3539157ca358c70a515878b77077af7d4611d",
+  "gazebo_distribution": "Harmonic",
+  "gazebo_sim_major": 8,
+  "target": "gz_x500",
+  "world": "default",
+  "vehicles": 1,
+  "headless": true,
+  "suggested_build_jobs": 2,
+  "runtime_status": "not_executed",
+  "dependency_lock_scope": "PX4 source and its git submodules; OS/apt/pip packages are not locked"
+}

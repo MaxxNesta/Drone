@@ -2,7 +2,7 @@
 
 > Publication update (2026-09-26): After the audit, the owner authorized replacing the Wi-Fi SSID/password in both firmware files with placeholders, deleting the local ZIP, and committing/pushing the project. Preservation and no-commit statements below describe the original audit snapshot. All 42 extracted files remain present; only firmware credential values were intentionally changed after that audit.
 
-Status: Stages 1–10 are merged. Stage 11 local prototype release candidate is implemented for review; see [Stage 11 results](STAGE11_INTEGRATION.md). Real-video accuracy/identity validation still requires independent manual labels.
+Status: Stages 1–11 are merged. Stage 12 adapter architecture and mock are implemented for review; see [Stage 11 results](STAGE11_INTEGRATION.md). Real-video accuracy/identity validation still requires independent manual labels.
 
 ## First algorithm to implement
 
@@ -52,3 +52,5 @@ These do not block the proposed point-target observation simulator. They do bloc
 ## Current stopping point
 
 Stage 11 supplies a local source release candidate with authenticated geometry recovery after bridge restart, coherent final-tick reads, a private-environment startup script and recorded end-to-end checks. Vehicle dynamics, planning, fleet algorithms and computer vision remain unchanged. The PR targets `dev` for review without automatic merge. See [Stage 11 setup, validation and known limitations](STAGE11_INTEGRATION.md).
+
+Stage 12 adds an optional simulator contract and pinned single-x500 PX4/Gazebo setup instructions. Real SITL execution is blocked by absent runtime dependencies on the current host; no integration success is claimed. See [Stage 12](STAGE12_SIMULATOR_ADAPTER.md). The next integration gate is a qualified read-only SITL telemetry transport, not aircraft commands.

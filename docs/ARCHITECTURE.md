@@ -117,3 +117,7 @@ The initial map is an SVG projection of local east/north meters with up displaye
 The existing backend now exposes view-authenticated `GET /v1/configurations/active`, returning a detached normalized config and matching run/epoch under its service lock. The dashboard's session-protected `/api/plan` proxies this read; its old transient plan cache is removed. Status, snapshot and heartbeat reads share the publication lock so final asynchronous recording cannot expose a finished status with prior-tick truth. The authoritative clock and simulation algorithms are unchanged.
 
 `scripts/skyview.py` owns only local process startup, credential configuration and shutdown. `mission_control.release_check` compares real transport/recording output against independent execution of the original simulator. See [Stage 11 release evidence and limitations](STAGE11_INTEGRATION.md).
+
+## Stage 12 optional simulator adapter boundary
+
+`simulator_adapter/` defines a separate version-1 read-only snapshot protocol, a delegating numerical wrapper and a packet-injection mock. The existing server still directly uses the numerical fleet engine. Adapter snapshots carry explicit provenance, ENU units, source/receipt times, identity, freshness and availability; they are not the existing WebSocket schema. A future PX4/Gazebo transport must qualify clock/origin mapping and capabilities before backend integration. See [Stage 12 environment, mappings and untested assumptions](STAGE12_SIMULATOR_ADAPTER.md).

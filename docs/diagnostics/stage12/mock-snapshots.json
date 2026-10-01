@@ -1,0 +1,203 @@
+{
+  "synthetic_fixture": true,
+  "not_px4_telemetry": true,
+  "snapshots": [
+    {
+      "schema_version": 1,
+      "type": "simulator_snapshot",
+      "backend": "mock",
+      "capabilities": {
+        "backend": "mock",
+        "clock_authority": "external_simulation",
+        "exact_replay": false,
+        "externally_stepped": false,
+        "commands": [],
+        "schema_version": 1
+      },
+      "epoch": "mock-run",
+      "sequence": 0,
+      "coordinate_frame": "ENU",
+      "time_domain": "simulation",
+      "simulation_time_s": 0.0,
+      "availability": "unavailable",
+      "reason": "awaiting_first_packet",
+      "vehicles": []
+    },
+    {
+      "schema_version": 1,
+      "type": "simulator_snapshot",
+      "backend": "mock",
+      "capabilities": {
+        "backend": "mock",
+        "clock_authority": "external_simulation",
+        "exact_replay": false,
+        "externally_stepped": false,
+        "commands": [],
+        "schema_version": 1
+      },
+      "epoch": "mock-run",
+      "sequence": 1,
+      "coordinate_frame": "ENU",
+      "time_domain": "simulation",
+      "simulation_time_s": 1,
+      "availability": "available",
+      "reason": null,
+      "vehicles": [
+        {
+          "vehicle_id": "uav-1",
+          "source_id": "x500-0",
+          "source_time_s": 1,
+          "received_monotonic_s": 10,
+          "provenance": "autopilot_estimate",
+          "position_enu_m": [
+            1,
+            2,
+            3
+          ],
+          "velocity_enu_mps": null,
+          "acceleration_enu_mps2": null,
+          "heading_rad": null,
+          "battery_fraction": null,
+          "mission_state": "unknown",
+          "completed_waypoints": null,
+          "waypoint_count": null,
+          "receipt_age_s": 0,
+          "simulation_age_s": 0,
+          "freshness": "fresh"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "type": "simulator_snapshot",
+      "backend": "mock",
+      "capabilities": {
+        "backend": "mock",
+        "clock_authority": "external_simulation",
+        "exact_replay": false,
+        "externally_stepped": false,
+        "commands": [],
+        "schema_version": 1
+      },
+      "epoch": "mock-run",
+      "sequence": 1,
+      "coordinate_frame": "ENU",
+      "time_domain": "simulation",
+      "simulation_time_s": 1,
+      "availability": "available",
+      "reason": null,
+      "vehicles": [
+        {
+          "vehicle_id": "uav-1",
+          "source_id": "x500-0",
+          "source_time_s": 1,
+          "received_monotonic_s": 10,
+          "provenance": "autopilot_estimate",
+          "position_enu_m": [
+            1,
+            2,
+            3
+          ],
+          "velocity_enu_mps": null,
+          "acceleration_enu_mps2": null,
+          "heading_rad": null,
+          "battery_fraction": null,
+          "mission_state": "unknown",
+          "completed_waypoints": null,
+          "waypoint_count": null,
+          "receipt_age_s": 0.5,
+          "simulation_age_s": 0,
+          "freshness": "stale"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "type": "simulator_snapshot",
+      "backend": "mock",
+      "capabilities": {
+        "backend": "mock",
+        "clock_authority": "external_simulation",
+        "exact_replay": false,
+        "externally_stepped": false,
+        "commands": [],
+        "schema_version": 1
+      },
+      "epoch": "mock-run",
+      "sequence": 1,
+      "coordinate_frame": "ENU",
+      "time_domain": "simulation",
+      "simulation_time_s": 1,
+      "availability": "available",
+      "reason": null,
+      "vehicles": [
+        {
+          "vehicle_id": "uav-1",
+          "source_id": "x500-0",
+          "source_time_s": 1,
+          "received_monotonic_s": 10,
+          "provenance": "autopilot_estimate",
+          "position_enu_m": [
+            1,
+            2,
+            3
+          ],
+          "velocity_enu_mps": null,
+          "acceleration_enu_mps2": null,
+          "heading_rad": null,
+          "battery_fraction": null,
+          "mission_state": "unknown",
+          "completed_waypoints": null,
+          "waypoint_count": null,
+          "receipt_age_s": 2,
+          "simulation_age_s": 0,
+          "freshness": "lost"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "type": "simulator_snapshot",
+      "backend": "mock",
+      "capabilities": {
+        "backend": "mock",
+        "clock_authority": "external_simulation",
+        "exact_replay": false,
+        "externally_stepped": false,
+        "commands": [],
+        "schema_version": 1
+      },
+      "epoch": "mock-run",
+      "sequence": 1,
+      "coordinate_frame": "ENU",
+      "time_domain": "simulation",
+      "simulation_time_s": 1,
+      "availability": "unavailable",
+      "reason": "simulator_disconnected",
+      "vehicles": [
+        {
+          "vehicle_id": "uav-1",
+          "source_id": "x500-0",
+          "source_time_s": 1,
+          "received_monotonic_s": 10,
+          "provenance": "autopilot_estimate",
+          "position_enu_m": [
+            1,
+            2,
+            3
+          ],
+          "velocity_enu_mps": null,
+          "acceleration_enu_mps2": null,
+          "heading_rad": null,
+          "battery_fraction": null,
+          "mission_state": "unknown",
+          "completed_waypoints": null,
+          "waypoint_count": null,
+          "receipt_age_s": 2,
+          "simulation_age_s": 0,
+          "freshness": "lost"
+        }
+      ]
+    }
+  ]
+}
