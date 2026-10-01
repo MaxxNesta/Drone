@@ -13,5 +13,7 @@
   "headless": true,
   "suggested_build_jobs": 2,
   "runtime_status": "not_executed",
-  "dependency_lock_scope": "PX4 source and its git submodules; OS/apt/pip packages are not locked"
+  "dependency_lock_scope": "PX4 source and its git submodules; OS/apt/pip packages are not locked",
+  "os_id": "ubuntu",
+  "os_version_id": "22.04"
 }

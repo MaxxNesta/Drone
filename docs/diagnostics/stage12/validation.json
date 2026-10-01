@@ -2,22 +2,22 @@
   "date": "2026-10-01",
   "python": {
     "core": {
-      "discovered": 242,
-      "passed": 227,
+      "discovered": 246,
+      "passed": 231,
       "skipped": 15,
-      "seconds": 24.32
+      "seconds": 18.583
     },
     "backend": {
-      "discovered": 242,
-      "passed": 238,
+      "discovered": 246,
+      "passed": 242,
       "skipped": 4,
-      "seconds": 15.723
+      "seconds": 12.211
     },
     "vision": {
-      "discovered": 242,
-      "passed": 231,
+      "discovered": 246,
+      "passed": 235,
       "skipped": 11,
-      "seconds": 16.929
+      "seconds": 13.231
     }
   },
   "new_adapter_tests": 11,
@@ -39,5 +39,6 @@
     "drone_sim/",
     "mission_control/",
     "dashboard/"
-  ]
+  ],
+  "preflight_review_tests": 4
 }

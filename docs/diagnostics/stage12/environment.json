@@ -2,7 +2,9 @@
   "schema_version": 1,
   "host": {
     "os": "Darwin",
-    "architecture": "arm64"
+    "architecture": "arm64",
+    "distribution_id": null,
+    "version_id": null
   },
   "executables": {
     "gz": null,
@@ -16,7 +18,7 @@
   "px4_revision": null,
   "gazebo_version": null,
   "blockers": [
-    "Host differs from selected Ubuntu amd64 baseline; use a separately qualified environment",
+    "Host differs from selected Ubuntu 22.04 amd64 baseline; use a separately qualified environment",
     "Gazebo executable missing",
     "No PX4 checkout supplied"
   ],

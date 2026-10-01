@@ -108,7 +108,7 @@ python3 -m scripts.sitl_diagnostics --px4 /path/to/skyview-px4 --report /tmp/sit
 python3 -m unittest tests.test_simulator_adapter -v
 ```
 
-Preflight reports paths/versions and baseline blockers; it never claims success or starts a simulator. It does not certify Ubuntu patch level, plugin availability, resource sufficiency or transport isolation.
+Preflight reports paths/versions and baseline blockers; it never claims success or starts a simulator. It requires Ubuntu ID/version 22.04 and an unambiguous successful gz-sim major-8 version probe. Unknown metadata, probe errors and mixed Gazebo majors are blockers. It does not certify Ubuntu patch level, plugin availability, resource sufficiency or transport isolation.
 
 ## Future backend integration gate
 
@@ -149,3 +149,5 @@ python3 -m unittest discover -v
 [Mock snapshot examples](diagnostics/stage12/mock-snapshots.json) are labeled synthetic fixtures and are not PX4 telemetry. Existing CI discovers the new tests automatically; no optional SITL software is installed in CI.
 
 Final local results (2026-10-01): 242 Python tests discovered per environment; core 227 passed/15 optional skips, backend 238 passed/4 skips, vision 231 passed/11 skips. The environment union exercises all 242 tests, including 11 new adapter regressions. Dashboard 13 unit tests and all 6 browser tests passed (54.0 s); production build, typecheck, formatting, launcher, 80-tick real WebSocket smoke and all 3 full transport/replay scenarios passed. Existing Starlette TestClient and macOS video-library warnings remain; no dependencies were upgraded to hide them. These results validate the unchanged numerical default and new contract, not PX4/Gazebo integration.
+
+PR review follow-up: corrected distribution/release and Gazebo-major checks. Four new preflight regressions pass; full suites now discover 246 tests (core 231 passed/15 skips, backend 242/4, vision 235/11). No production dashboard or simulator behavior changed; prior browser/build evidence remains applicable.
