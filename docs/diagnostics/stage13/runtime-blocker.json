@@ -1,0 +1,17 @@
+{
+  "host_os": "Darwin",
+  "architecture": "arm64",
+  "disk_free_bytes": 1899175936,
+  "observed_physical_ram_bytes": 8589934592,
+  "observed_cpu_count": 8,
+  "compatible_ubuntu_environment_available": false,
+  "sitl_executed": false,
+  "captured_sitl_packets": 0,
+  "simulator_resource_measurements": null,
+  "blockers": [
+    "No Gazebo or PX4 checkout",
+    "No installed Ubuntu VM/container runtime found",
+    "Insufficient free disk for the Stage 12 environment allowance"
+  ],
+  "note": "Host capacity diagnostics only. No simulated flight, Gazebo timing or PX4 resource measurements exist."
+}

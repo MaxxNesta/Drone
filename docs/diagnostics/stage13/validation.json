@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-01",
+  "python": {
+    "core": {
+      "discovered": 259,
+      "passed": 241,
+      "skipped": 18,
+      "seconds": 18.101
+    },
+    "backend": {
+      "discovered": 259,
+      "passed": 253,
+      "skipped": 6,
+      "seconds": 11.805
+    },
+    "vision": {
+      "discovered": 259,
+      "passed": 245,
+      "skipped": 14,
+      "seconds": 12.987
+    },
+    "parser": {
+      "discovered": 259,
+      "passed": 243,
+      "skipped": 16,
+      "seconds": 11.739
+    }
+  },
+  "new_stage13_tests": 13,
+  "dashboard": {
+    "unit_tests_passed": 15,
+    "full_browser_tests_passed": 7,
+    "full_browser_reported_duration": "1.1m",
+    "final_handoff_browser_tests_passed": 1,
+    "final_handoff_browser_seconds": 6.3,
+    "production_build": "passed",
+    "typecheck": "passed",
+    "format": "passed",
+    "desktop_and_narrow_fixture_screenshots": "inspected"
+  },
+  "numerical_transport_smoke": "passed",
+  "full_numerical_transport_replay_scenarios_passed": 3,
+  "startup_shutdown": "passed",
+  "mavlink_generated_v1_v2_decode": "passed with pymavlink 2.4.49",
+  "loopback_udp_generated_packet_receive": "passed",
+  "real_sitl_executed": false,
+  "actual_sitl_capture_count": 0,
+  "gazebo_runtime_test": "blocked; subscription API checked with test doubles only",
+  "preserved_paths": [
+    "existing-tracker/",
+    "drone_sim/"
+  ],
+  "warnings": [
+    "Existing Starlette TestClient deprecation",
+    "Existing macOS optional video-library duplicate classes"
+  ]
+}

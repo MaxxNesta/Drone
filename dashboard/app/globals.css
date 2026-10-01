@@ -1578,3 +1578,64 @@ small {
 .vehicle-controls {
   align-self: start;
 }
+
+.sitl-panel {
+  margin: 0 0 1rem;
+  border: 1px solid #35505c;
+  border-radius: 0.5rem;
+  background: #101c24;
+}
+.sitl-panel summary {
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+}
+.sitl-panel summary span {
+  margin-left: 0.75rem;
+  color: #91a0aa;
+  font-weight: 400;
+}
+.sitl-panel summary:focus-visible {
+  outline: 2px solid #4eade1;
+  outline-offset: 3px;
+}
+.sitl-content {
+  padding: 0 1rem 1rem;
+  overflow-wrap: anywhere;
+}
+.sitl-content p {
+  margin: 0.5rem 0;
+  color: #91a0aa;
+}
+.sitl-content .sitl-evidence {
+  color: #f1f5f7;
+  font-weight: 600;
+}
+.sitl-sources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.sitl-source h3 {
+  font-size: 1rem;
+}
+.sitl-source dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #35505c;
+  padding: 0.4rem 0;
+}
+.sitl-source dt {
+  color: #91a0aa;
+}
+.sitl-source dd {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 700px) {
+  .sitl-sources {
+    grid-template-columns: 1fr;
+  }
+}

@@ -121,3 +121,7 @@ The existing backend now exposes view-authenticated `GET /v1/configurations/acti
 ## Stage 12 optional simulator adapter boundary
 
 `simulator_adapter/` defines a separate version-1 read-only snapshot protocol, a delegating numerical wrapper and a packet-injection mock. The existing server still directly uses the numerical fleet engine. Adapter snapshots carry explicit provenance, ENU units, source/receipt times, identity, freshness and availability; they are not the existing WebSocket schema. A future PX4/Gazebo transport must qualify clock/origin mapping and capabilities before backend integration. See [Stage 12 environment, mappings and untested assumptions](STAGE12_SIMULATOR_ADAPTER.md).
+
+## Stage 13 optional read-only SITL handoff
+
+The optional collector subscribes to Gazebo truth/clock and passively receives local PX4 telemetry, writes a bounded atomic snapshot, and exposes it through view-authenticated `GET /v1/sitl` and the session bridge's `GET /api/sitl`. A separate read-only dashboard disclosure preserves truth/estimate provenance. The numerical engine and its command/WebSocket contracts remain the default. Real SITL qualification is blocked on this host; synthetic fixtures do not establish PX4 integration. See [Stage 13](STAGE13_REAL_SITL.md).

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "transport": "real loopback Uvicorn + HTTP + WebSockets",
+  "simulated_ticks": 80,
+  "simulation_duration_s": 1.6,
+  "requested_playback_speed": 2,
+  "observed_wall_duration_s": 1.3578322501853108,
+  "received_fleet_samples_after_initial": 80,
+  "concurrent_fleet_and_vehicle_viewers": true,
+  "unauthenticated_rest_rejected": true,
+  "reconnection_resync": true,
+  "deterministic_replay_matches": true,
+  "run_state": "finished",
+  "mission_all_completed": false
+}

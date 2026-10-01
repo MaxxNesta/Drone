@@ -23,3 +23,8 @@ __pycache__/
 /.skyview.env
 /artifacts/skyview/
 /artifacts/stage11/
+
+# Optional local SITL environment and qualification captures
+/.venv-sitl/
+/artifacts/stage12/
+/artifacts/stage13/
