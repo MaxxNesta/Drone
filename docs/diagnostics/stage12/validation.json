@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-01",
+  "python": {
+    "core": {
+      "discovered": 246,
+      "passed": 231,
+      "skipped": 15,
+      "seconds": 18.583
+    },
+    "backend": {
+      "discovered": 246,
+      "passed": 242,
+      "skipped": 4,
+      "seconds": 12.211
+    },
+    "vision": {
+      "discovered": 246,
+      "passed": 235,
+      "skipped": 11,
+      "seconds": 13.231
+    }
+  },
+  "new_adapter_tests": 11,
+  "dashboard": {
+    "unit_tests_passed": 13,
+    "browser_tests_passed": 6,
+    "browser_seconds": 54.0,
+    "production_build": "passed",
+    "typecheck": "passed",
+    "format": "passed"
+  },
+  "actual_websocket_smoke": "passed",
+  "full_transport_and_replay_scenarios_passed": 3,
+  "startup_and_shutdown": "passed",
+  "sitl_executed": false,
+  "sitl_blocker": "No PX4/Gazebo runtime or container engine on Darwin arm64 host; selected Ubuntu amd64 environment not provisioned",
+  "preserved_paths": [
+    "existing-tracker/",
+    "drone_sim/",
+    "mission_control/",
+    "dashboard/"
+  ],
+  "preflight_review_tests": 4
+}

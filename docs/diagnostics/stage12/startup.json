@@ -1,0 +1,7 @@
+{
+  "release_candidate": "0.1.0-rc.1",
+  "production_dashboard_ready": true,
+  "authenticated_backend_ready": true,
+  "both_owned_servers_stopped": true,
+  "credentials_absent_from_logs": true
+}
